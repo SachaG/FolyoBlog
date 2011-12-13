@@ -86,8 +86,5 @@ define('WP_DEBUG', false);
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
 
-/* PHPFOG edit to patch a few issues of file saves, plugins, etc. */
-define('FS_METHOD', 'direct');
-
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
