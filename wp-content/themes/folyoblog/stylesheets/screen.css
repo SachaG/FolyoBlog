@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /** START HTML5 Boilerplate CSS **/
 /**
  * HTML5 ✰ Boilerplate
@@ -662,9 +661,8 @@ body {
   background: white;
   width: 690px;
   margin-right: 60px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 20px 0;
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 20px 0;
-  -o-box-shadow: rgba(0, 0, 0, 0.15) 0 0 20px 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 20px 0;
   box-shadow: rgba(0, 0, 0, 0.15) 0 0 20px 0;
   float: left;
   position: relative;
@@ -694,18 +692,13 @@ body {
 }
 
 /*-------------- background ---------------*/
-/* line 3, ../sass/partials/_base.scss */
-html {
-  background: url("../images/bg.png") repeat;
-}
-
-/* line 6, ../sass/partials/_base.scss */
+/* line 5, ../sass/partials/_base.scss */
 body {
-  background: url("../images/header-bg.png") top repeat-x;
+  background: url("../images/blackboard-bg.png") top repeat-x;
 }
 
 /*-------------- typography ---------------*/
-/* line 10, ../sass/partials/_base.scss */
+/* line 9, ../sass/partials/_base.scss */
 body, h1, h2, h3, h4, h5, input, textarea {
   font-family: proxima-nova-soft, sans-serif;
   font-size: 18px;
@@ -713,37 +706,37 @@ body, h1, h2, h3, h4, h5, input, textarea {
   color: #574742;
 }
 
-/* line 16, ../sass/partials/_base.scss */
+/* line 15, ../sass/partials/_base.scss */
 h1, h2, h3, h4, h5 {
   line-height: 1.2;
 }
 
-/* line 19, ../sass/partials/_base.scss */
+/* line 18, ../sass/partials/_base.scss */
 h1 {
   font-size: 60px;
 }
 
-/* line 22, ../sass/partials/_base.scss */
+/* line 21, ../sass/partials/_base.scss */
 h2 {
   font-size: 48px;
   font-weight: 600;
 }
 
-/* line 26, ../sass/partials/_base.scss */
+/* line 25, ../sass/partials/_base.scss */
 h3 {
   font-size: 30px;
 }
 
-/* line 29, ../sass/partials/_base.scss */
+/* line 28, ../sass/partials/_base.scss */
 h4 {
   font-size: 18px;
 }
 
-/* line 36, ../sass/partials/_base.scss */
+/* line 35, ../sass/partials/_base.scss */
 .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content ul, .entry-content ol, .entry-content p, .entry-content hr, .entry-content blockquote {
   margin: 0 0 30px 0;
 }
-/* line 39, ../sass/partials/_base.scss */
+/* line 38, ../sass/partials/_base.scss */
 .entry-content hr {
   border: none;
   background: #e1e1e0;
@@ -751,7 +744,7 @@ h4 {
   width: 690px;
   margin: 60px 0;
 }
-/* line 46, ../sass/partials/_base.scss */
+/* line 45, ../sass/partials/_base.scss */
 .entry-content blockquote {
   background: #e1e1e0;
   padding: 30px 30px 0 30px;
@@ -759,19 +752,19 @@ h4 {
   overflow: hidden;
   font-style: italic;
 }
-/* line 53, ../sass/partials/_base.scss */
+/* line 52, ../sass/partials/_base.scss */
 .entry-content ul {
   padding-left: 60px;
   color: #eb5f3a;
   list-style-type: none;
 }
-/* line 57, ../sass/partials/_base.scss */
+/* line 56, ../sass/partials/_base.scss */
 .entry-content ul li {
   color: #574742;
   position: relative;
   margin-bottom: 10px;
 }
-/* line 62, ../sass/partials/_base.scss */
+/* line 61, ../sass/partials/_base.scss */
 .entry-content ul li:before {
   content: "•";
   color: #eb5f3a;
@@ -785,19 +778,19 @@ h4 {
 }
 
 /*-------------- links ---------------*/
-/* line 76, ../sass/partials/_base.scss */
+/* line 75, ../sass/partials/_base.scss */
 a {
   color: #eb5f3a;
   font-weight: bold;
   text-decoration: none;
 }
 
-/* line 81, ../sass/partials/_base.scss */
+/* line 80, ../sass/partials/_base.scss */
 a:visited {
   color: #e1947e;
 }
 
-/* line 84, ../sass/partials/_base.scss */
+/* line 83, ../sass/partials/_base.scss */
 a:hover {
   color: #574742;
 }
@@ -1103,23 +1096,25 @@ a:hover {
 .entry-date .full-date {
   background: #e1e1e0;
   opacity: 0;
-  -moz-transition-property: opacity, margin-top;
   -webkit-transition-property: opacity, margin-top;
+  -moz-transition-property: opacity, margin-top;
+  -ms-transition-property: opacity, margin-top;
   -o-transition-property: opacity, margin-top;
   transition-property: opacity, margin-top;
-  -moz-transition-duration: 300ms;
   -webkit-transition-duration: 300ms;
+  -moz-transition-duration: 300ms;
+  -ms-transition-duration: 300ms;
   -o-transition-duration: 300ms;
   transition-duration: 300ms;
-  -moz-transition-timing-function: ease-in;
   -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -ms-transition-timing-function: ease-in;
   -o-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
-  -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
-  -o-border-radius: 10px;
+  -moz-border-radius: 10px;
   -ms-border-radius: 10px;
-  -khtml-border-radius: 10px;
+  -o-border-radius: 10px;
   border-radius: 10px;
   width: 80px;
   margin-left: -35px;
@@ -1147,8 +1142,9 @@ a:hover {
 .entry-date:hover .full-date {
   margin-top: 10px;
   opacity: 1;
-  -moz-transition-property: opacity, margin-top;
   -webkit-transition-property: opacity, margin-top;
+  -moz-transition-property: opacity, margin-top;
+  -ms-transition-property: opacity, margin-top;
   -o-transition-property: opacity, margin-top;
   transition-property: opacity, margin-top;
 }
@@ -1206,11 +1202,10 @@ a:hover {
   height: 30px;
   padding: 0 10px 0 0;
   background: #f7efed url("../images/pictos.png") no-repeat 0 -330px;
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
-  -o-border-radius: 3px;
+  -moz-border-radius: 3px;
   -ms-border-radius: 3px;
-  -khtml-border-radius: 3px;
+  -o-border-radius: 3px;
   border-radius: 3px;
   text-align: right;
   font-size: 16px;
@@ -1375,11 +1370,10 @@ article.post .read-more, article.page .read-more {
 .social ul li {
   height: 30px;
   width: 30px;
-  -moz-border-radius: 30px;
   -webkit-border-radius: 30px;
-  -o-border-radius: 30px;
+  -moz-border-radius: 30px;
   -ms-border-radius: 30px;
-  -khtml-border-radius: 30px;
+  -o-border-radius: 30px;
   border-radius: 30px;
   background: #eb5f3a;
   margin-right: 12px;
@@ -1609,17 +1603,15 @@ form .form-item:before {
 }
 /* line 404, ../sass/partials/_modules.scss */
 form .wpcf7-text, form textarea {
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
-  -o-border-radius: 3px;
+  -moz-border-radius: 3px;
   -ms-border-radius: 3px;
-  -khtml-border-radius: 3px;
+  -o-border-radius: 3px;
   border-radius: 3px;
   border: none;
   box-shadow: rgba(255, 255, 255, 0.8) 0 1px 0, inset rgba(0, 0, 0, 0.35) 0 1px 0;
-  -moz-box-shadow: 0 1px 0 0 white, inset 0 1px 2px 0 rgba(0, 0, 0, 0.15), inset 0 0 0px 1px #e2d0cc;
   -webkit-box-shadow: 0 1px 0 0 white, inset 0 1px 2px 0 rgba(0, 0, 0, 0.15), inset 0 0 0px 1px #e2d0cc;
-  -o-box-shadow: 0 1px 0 0 white, inset 0 1px 2px 0 rgba(0, 0, 0, 0.15), inset 0 0 0px 1px #e2d0cc;
+  -moz-box-shadow: 0 1px 0 0 white, inset 0 1px 2px 0 rgba(0, 0, 0, 0.15), inset 0 0 0px 1px #e2d0cc;
   box-shadow: 0 1px 0 0 white, inset 0 1px 2px 0 rgba(0, 0, 0, 0.15), inset 0 0 0px 1px #e2d0cc;
   position: relative;
 }
@@ -1659,9 +1651,8 @@ form textarea {
 /* line 440, ../sass/partials/_modules.scss */
 form input:focus, form textarea:focus {
   outline: none;
-  -moz-box-shadow: 0 1px 0 0 white, inset 0 1px 2px 0 rgba(0, 0, 0, 0.15), inset 0 0 0px 3px #e2d0cc;
   -webkit-box-shadow: 0 1px 0 0 white, inset 0 1px 2px 0 rgba(0, 0, 0, 0.15), inset 0 0 0px 3px #e2d0cc;
-  -o-box-shadow: 0 1px 0 0 white, inset 0 1px 2px 0 rgba(0, 0, 0, 0.15), inset 0 0 0px 3px #e2d0cc;
+  -moz-box-shadow: 0 1px 0 0 white, inset 0 1px 2px 0 rgba(0, 0, 0, 0.15), inset 0 0 0px 3px #e2d0cc;
   box-shadow: 0 1px 0 0 white, inset 0 1px 2px 0 rgba(0, 0, 0, 0.15), inset 0 0 0px 3px #e2d0cc;
 }
 /* line 444, ../sass/partials/_modules.scss */
@@ -1679,11 +1670,10 @@ form span.wpcf7-not-valid-tip {
 form .wpcf7-submit {
   color: white;
   background: #eb5f3a;
-  -moz-border-radius: 30px;
   -webkit-border-radius: 30px;
-  -o-border-radius: 30px;
+  -moz-border-radius: 30px;
   -ms-border-radius: 30px;
-  -khtml-border-radius: 30px;
+  -o-border-radius: 30px;
   border-radius: 30px;
   height: 40px;
   padding: 0 20px;
@@ -1756,11 +1746,10 @@ form div.wpcf7-mail-sent-ok {
 }
 /* line 547, ../sass/partials/_modules.scss */
 #disqus_thread .dsq-comment .dsq-avatar img, #disqus_thread .dsq-comment:hover .dsq-avatar img {
-  -moz-border-radius: 60px;
   -webkit-border-radius: 60px;
-  -o-border-radius: 60px;
+  -moz-border-radius: 60px;
   -ms-border-radius: 60px;
-  -khtml-border-radius: 60px;
+  -o-border-radius: 60px;
   border-radius: 60px;
   height: 60px;
   width: 60px;
@@ -1860,11 +1849,10 @@ body.page .entry-content {
 }
 /* line 32, ../sass/partials/_pages.scss */
 .home .post .entry-image a {
-  -moz-border-radius: 120px;
   -webkit-border-radius: 120px;
-  -o-border-radius: 120px;
+  -moz-border-radius: 120px;
   -ms-border-radius: 120px;
-  -khtml-border-radius: 120px;
+  -o-border-radius: 120px;
   border-radius: 120px;
   overflow: hidden;
 }
@@ -1968,20 +1956,18 @@ body.page .entry-content {
 .single .read-next .navigation .entry-image {
   margin-bottom: 15px;
   position: relative;
-  -moz-border-radius: 160px;
   -webkit-border-radius: 160px;
-  -o-border-radius: 160px;
+  -moz-border-radius: 160px;
   -ms-border-radius: 160px;
-  -khtml-border-radius: 160px;
+  -o-border-radius: 160px;
   border-radius: 160px;
 }
 /* line 129, ../sass/partials/_pages.scss */
 .single .read-next .navigation .entry-image a {
-  -moz-border-radius: 160px;
   -webkit-border-radius: 160px;
-  -o-border-radius: 160px;
+  -moz-border-radius: 160px;
   -ms-border-radius: 160px;
-  -khtml-border-radius: 160px;
+  -o-border-radius: 160px;
   border-radius: 160px;
   overflow: hidden;
   display: block;
@@ -2000,22 +1986,24 @@ body.page .entry-content {
   display: block;
   position: absolute;
   z-index: 20;
-  -moz-border-radius: 160px;
   -webkit-border-radius: 160px;
-  -o-border-radius: 160px;
+  -moz-border-radius: 160px;
   -ms-border-radius: 160px;
-  -khtml-border-radius: 160px;
+  -o-border-radius: 160px;
   border-radius: 160px;
-  -moz-transition-property: opacity;
   -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -ms-transition-property: opacity;
   -o-transition-property: opacity;
   transition-property: opacity;
-  -moz-transition-duration: 300ms;
   -webkit-transition-duration: 300ms;
+  -moz-transition-duration: 300ms;
+  -ms-transition-duration: 300ms;
   -o-transition-duration: 300ms;
   transition-duration: 300ms;
-  -moz-transition-timing-function: ease-in;
   -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -ms-transition-timing-function: ease-in;
   -o-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
   opacity: 0;

@@ -13,13 +13,6 @@
 		<li class="widget-container widget_tagline"><h3><span>About</span></h3>
 		<p id="tagline">Hi! I’m Sacha Greif, a designer, coder, and entrepreneur living in Paris. This is my blog, and <a href="http://twitter.com/SachaGreif">I'm on Twitter</a>, too.</p>
 		</li>
-				
-		<li class="widget-container widget_fusion">
-			<h3><span>Supported By</span></h3>
-			<div id="fusion_ad">
-				<a class="fusion-link" href="http://fusionads.net">Powered by Fusion</a>
-			</div>			
-		</li>
 
 	<?php
 		/* When we call the dynamic_sidebar() function, it'll spit out
@@ -50,28 +43,12 @@
 				</li>
 
 			<?php endif; // end primary widget area ?>
-			<li class="widget-container widget_social social clearfix">
-				<h3><span>Elsewhere</span></h3>
-			<ul class="clearfix">
-				<li class="twitter"><a href="http://twitter.com/SachaGreif">Twitter</a></li>
-				<li class="dribbble"><a href="http://dribbble.com/sacha">Dribbble</a></li>
-				<li class="quora"><a href="http://quora.com/Sacha-Greif">Quora</a></li>
-				<!-- <li class="zerply"><a href="http://zerply.com/SachaGreif">Zerply</a></li> -->
-				<li class="blank"></li>
-				<li class="blank"></li>
-				<li class="blank"></li>
-			</ul>
-			</li>
+
 
 			<li class="widget-container widget_folyo">
 				<h3><span>My Startup</span></h3>
 			<a href="http://folyo.me"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/folyo-ad-240b.png" alt="Folyo"/></a>
 			<p>Need a designer? <a href="http://folyo.me">Folyo</a> helps companies find great, vetted freelance designers.</p>
-			</li>
-						
-			<li class="widget-container widget_smashing">
-							<h3><span>Part Of The</span></h3>
-				<a href="http://www.smashingmagazine.com/the-smashing-network/"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/smashing-network-s.png"/></a><br/>
 			</li>
 				</ul>
 

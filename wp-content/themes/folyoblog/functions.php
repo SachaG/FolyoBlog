@@ -38,6 +38,9 @@
  * @since Boilerplate 1.0
  */
 
+// Remove Admin Bar Front End
+add_filter('show_admin_bar', '__return_false');
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  *
