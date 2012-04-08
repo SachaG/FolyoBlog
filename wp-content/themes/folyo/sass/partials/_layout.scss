@@ -1,0 +1,92 @@
+// Here is where you can define your constants for your application and to configure the blueprint framework.
+// Feel free to delete these if you want keep the defaults:
+
+$blueprint-grid-columns: 24;
+$blueprint-grid-width: 30px;
+$blueprint-grid-margin: 10px;
+
+// If you change your grid column dimensions
+// you can make a new grid background image from the command line like this:
+// compass grid-img 30+10x16
+
+body{
+	padding-top:$unit;
+}
+.container{
+	width:990px;
+	margin:0 auto;
+	padding:0 100px;
+}
+/*-------------- navigation ---------------*/
+#navigation{
+	float:right;
+	margin-bottom:50px;
+	font-size:16px;
+	@include letterpress(0.5);
+	#skip{
+		display:none;
+	}
+	#selectmenu-primary{
+		display:none;
+	}
+	ul{
+		width:240px;
+		height:91px;
+		overflow:hidden;
+		margin:0;
+		padding:0;
+		li{
+			width:90px;
+			float:left;
+			display:block;
+			margin-bottom:5px;
+			&:nth-child(odd){
+				margin-right:$unit;
+			}
+			&:nth-child(5),&:nth-child(6){
+				margin-bottom:0;
+			}
+			a{
+				&:visited{
+					color:$red;
+				}
+				&:hover{
+					color:$brown !important;
+				}
+			}
+			&.current-menu-item a{
+				cursor:text;
+				color:$brown;
+				&:visited{
+					color:$brown;
+				}
+			}
+		}
+	}
+}
+#content{
+	background:white;
+	width:690px;
+	margin-right:$unit;
+	@include box-shadow(black(0.15) 0 0 20px 0);
+	float:left;
+	position:relative;
+	&:before{
+		right:100%;
+		background:white;
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 9999px;
+	}
+}
+#sidebar{
+	width:240px;
+	float:left;
+	padding-top:$unit;
+}
+#footer{
+	width:100%;
+	float:left;
+}

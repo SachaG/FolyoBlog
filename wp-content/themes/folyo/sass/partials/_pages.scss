@@ -1,0 +1,168 @@
+/*-------------- page ---------------*/
+body.page{
+	.page{
+		padding-right:90px;
+	}
+	.entry-content{
+		margin-bottom:120px;
+	}
+}
+/*-------------- home ---------------*/
+.home{
+	.post{
+		padding: 0 $unit+30 $unit 0;
+		border-bottom:1px solid $lightgrey;
+		.entry-title{
+			font-size:30px;
+			line-height:1.1;
+			margin-bottom:10px;
+		}
+		&:last-child{
+			border:none;
+			margin-bottom:0;
+		}
+		.entry-image{
+			float:right;
+			margin-left:$unit;
+			a, img{
+				height:120px;
+				width:120px;
+				display:block;
+			}
+			a{
+				@include border-radius(120px);
+				overflow:hidden;
+			}
+		}
+		.entry-summary{
+			//width:420px;
+		}
+	}
+	.navigation{
+		margin-bottom:60px;
+		overflow:hidden;
+		padding-right:90px;
+		.nav-previous{
+			float:left;
+		}
+		.nav-next{
+			float:right;
+		}
+	}
+}
+/*-------------- single ---------------*/
+.single{ 
+	.post{
+		border-bottom:4px solid $red;
+		.entry-image{
+			width:690px;
+			overflow:hidden;
+			margin-bottom:60px;
+			img{
+				display:block;
+				border-bottom:4px solid $red;
+			}
+			.credit{
+				font-size:12px;
+				margin-top:5px;
+				color:$beige;
+			}
+		}
+		.entry-instapaper{
+
+		}
+		.entry-title{
+			//margin-bottom:37px;
+			//margin-bottom:44px;
+		}
+		.entry-utility{
+			display:none;
+		}
+		.wp-caption{
+			width:690px;
+			@include light-pattern;
+			margin-bottom:30px;
+			overflow:hidden;
+			a, img{
+				display:block;
+			}
+			.wp-caption-text{
+				margin-bottom:0;
+				color:$beige;
+				padding:10px 15px;
+				font-variant:small-caps;
+			}
+		}
+	}
+	.read-next{
+		padding:0 $unit $unit 0;
+		margin-bottom:$unit;
+		border-bottom:1px solid $lightgrey;
+		h3{
+			margin-bottom:30px;
+		}
+		.navigation{
+			overflow:hidden;
+			.post-preview{
+				margin-right:60px;
+				float:left;
+				width:160px;
+				>a, >span{
+					font-size:16px;
+					text-align:center;
+					line-height:1.3;
+					display:block;
+					font-weight:bold;
+				}
+				&:last-child{
+					margin-right:0;
+				}
+				h4{
+					text-align:center;
+					font-variant:small-caps;
+				}
+			}
+			.entry-image{
+				margin-bottom:15px;
+				position:relative;
+				@include border-radius(160px);
+				a{	
+					@include border-radius(160px);
+					overflow:hidden;
+					display:block;
+					img{
+						width:160px;
+						display:block;
+					}
+					.arrow{
+						height:100%;
+						width:100%;
+						display:block;
+						background:url("../images/arrow-sprite.png") left -160px;
+						display:block;
+						position:absolute;
+						z-index:20;
+						@include border-radius(160px);
+						@include transition-property(opacity);
+						@include transition-duration(300ms);
+						@include transition-timing-function(ease-in);
+						opacity:0;
+					}
+					&:hover .arrow{
+						opacity:1;
+					}
+				}
+				&.blank{
+					background:$beige;
+					opacity:0.25;
+				}
+			}
+			.nav-previous .arrow{
+				background-position:left bottom !important;
+			}
+			.nav-next .arrow{
+				background-position:left top !important;
+			}
+		}
+	}
+}

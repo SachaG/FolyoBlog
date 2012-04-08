@@ -1,0 +1,198 @@
+@import "compass/css3";
+@import "partials/mixins";
+html, body, input, *{
+	font-family: 'Arvo', serif;
+}
+body, html{
+	margin:0;
+	padding:0;
+}
+body{
+	background:url("../images/bootstrap/bg.png");
+	color:#b3aca5;
+	text-shadow:0px 1px 3px black(0.75);
+	line-height:1.7;
+}
+header{
+	padding-top:60px;
+}
+#container{
+	width:900px;
+	margin:0 auto;
+	text-align:center;
+}
+#main{
+	background:url("../images/bootstrap/theme.png") no-repeat center center;
+	padding-top:300px;
+}
+form{
+	overflow:hidden;
+	width:570px;
+	height:50px;
+	padding-top:10px;
+	margin:0 auto;
+	margin-bottom:30px;
+	.email{
+		float:left;
+		label{
+			text-shadow:none;
+			color:#a19890;
+			line-height:35px;
+			height:30px;
+			padding:5px 15px;
+		}
+		input{
+			display:block;
+			margin-top:3px;
+			padding:10px 15px;
+			width:350px;
+			margin-right:10px;
+			height:20px;
+			line-height:20px;
+			font-size:18px;
+			color:#565048;
+			border:1px solid #3b352d;
+			@include border-radius(20px);
+			@include box-shadow(
+				inset 0 3px 3px black(0.35),
+				0 1px 2px white(0.25)
+			);
+			&:focus{
+				outline:none;
+			}
+		}
+	}
+	.submit{
+		float:left;
+		position:relative;
+		&:before{	
+			content:" ";
+			display:block;
+			width:170px;
+			padding:0 2px;
+			height:45px;
+			margin-top:2px;
+			background:black(0.8);
+			@include border-radius(22px);
+			@include box-shadow(0 1px 2px white(0.2));
+			z-index:-100;
+			position:absolute;
+			top:-2px;
+			left:-2px;
+		}
+	}
+	.submit button{
+		display:block;
+		cursor:pointer;
+		float:left;
+		height:40px;
+		width:170px;
+		padding:0 15px;
+		color:white;
+		font-weight:bold;
+		text-shadow: 0px 1px 2px black(0.55);
+		font-size:16px;
+		@include border-radius(20px);
+		@include background-image(linear-gradient(top, #7fbf2b 0%, #97d844 15%, #70aa25 100%));
+		@include box-shadow(
+			0 1px 0 white(0.35),
+			inset 0 0 10px white(0.35)
+		);
+		border:0;
+		position:relative;
+		top:-2px;
+		margin-bottom:20px;
+/*		@include transition-property("top, height");
+		@include transition-duration(1s);
+		@include transition-timing-function(ease-out);
+		*/
+		&:before{
+			content:" ";
+			display:block;
+			background:#709b14;
+			@include background-image(linear-gradient(top, black(0) 90%, black(0.2) 100%));
+			@include border-radius(20px);
+			position:absolute;
+			z-index:-50;
+			top:0px;
+			left:0px;
+			width:170px;
+			height:45px;
+		}
+		&:hover{
+/*			@include background-image(linear-gradient(top, #78b32b 0%, #abee54 15%, #78b32b 100%));
+			@include box-shadow(
+				0 1px 0 white(0.35),
+				inset 0 0 10px white(0.35)
+			);	*/
+			top:-4px;
+		}
+		&:hover:before{
+			height:47px;
+		}
+		&:active{
+			top:0px;
+		}
+		&:active:before{
+			height:43px;
+		}
+	}
+}
+@-moz-document url-prefix() {
+	form .submit button:before {
+        left:-18px;
+		top:-12px;
+    }
+}
+a{
+	color:#56b4e9;
+	text-decoration:none;
+	&:visited{
+		color:#56b4e9;
+	}
+	&:hover{
+		color:white;
+		text-shadow:0 0 5px white(0.25);
+	}
+}
+h1,h2,h3,h4,h5{
+	margin:0;
+}
+h1{
+	color:white;
+	font-size:44px;
+}
+h2{
+	font-size:18px;
+	font-weight:normal;
+	strong{
+		color:white;
+	}
+}
+h3{
+	color:white;
+	em{
+		font-size:36px;
+		font-style:normal;
+		display:inline-block;
+	}
+	span{
+		display:inline-block;
+		font-size:16px;
+	}
+}
+footer{
+	@include box-shadow(
+		0 -1px 0 black(0.3),
+		inset 0 1px 0 white(0.05)
+	);
+	width:570px;
+	margin:0 auto;
+	padding:20px 0;
+	font-size:13px;
+	.twitter{
+		display:inline-block;
+		position:relative;
+		top:4px;
+	}
+}
