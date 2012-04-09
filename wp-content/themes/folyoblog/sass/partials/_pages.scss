@@ -10,8 +10,7 @@ body.page{
 /*-------------- home ---------------*/
 .home{
 	.post{
-		padding: 0 $unit+30 $unit 0;
-		border-bottom:1px solid $lightgrey;
+		margin-bottom:50px;
 		.entry-title{
 			font-size:30px;
 			line-height:1.1;

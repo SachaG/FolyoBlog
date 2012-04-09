@@ -1,16 +1,13 @@
 /*-------------- logo ---------------*/
-#logo{
-	height:90px;
-	width:90px;
-	position:absolute;
-	z-index:10;
-	top:-13px;
-	
-	a{
-		background:url("../images/logo.png") no-repeat;
-		height:90px;
-		width:90px;
-		@include hide-text;
+header{
+	float:right;
+	#logo{
+		a{
+			background:url("../images/folyo-logo-240.png") no-repeat;
+			height:110px;
+			width:240px;
+			@include hide-text;
+		}
 	}
 }
 /*-------------- date ---------------*/
@@ -150,12 +147,12 @@
 	font-size:36px;
 	margin-bottom:44px;
 	a{
-		color:$brown;
+		color:$text;
 		&:visited{
-			color:$brown2;
+			color:$text;
 		}
 		&:hover{
-			color:$red;
+			color:$link;
 		}
 	}
 }
@@ -195,14 +192,6 @@
 }
 /*-------------- post ---------------*/
 article.post, article.page{
-	margin:$unit 0;
-	padding: 0 $unit+30 0 0;
-	position:relative;
-	.entry-date{
-		left:-90px;
-		top:4px;
-		position:absolute;
-	}
 	.read-more{
 		text-decoration:underline;
 		display:inline-block;

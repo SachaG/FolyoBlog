@@ -31,16 +31,8 @@
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<link rel="shortcut icon" href="/favicon.ico" />
 		
-		<script type="text/javascript" src="http://use.typekit.com/hfk4atd.js"></script>
+		<script type="text/javascript" src="http://use.typekit.com/kdx2dsb.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-		
-		<script type="text/javascript">
-		(function(){
-		  var fusion = document.createElement('script');
-		  fusion.src = window.location.protocol + '//adn.fusionads.net/api/1.0/ad.js?zoneid=160&rand=' + Math.floor(Math.random()*9999999);
-		  fusion.async = true;
-		  (document.head || document.getElementsByTagName('head')[0]).appendChild(fusion);
-		})();</script>
 		
 <?php
 		/* We add some JavaScript to pages with the comment form
@@ -63,15 +55,15 @@
 	</head>
 	<body <?php body_class(); ?>>
 		<div class="container clearfix">
-		<header role="banner">
+		<header>
 			<h1 id="logo"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<nav id="navigation" role="navigation">
+			  <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
+				<a id="skip" href="#content" title="<?php esc_attr_e( 'Skip to content', 'boilerplate' ); ?>"><?php _e( 'Skip to content', 'boilerplate' ); ?></a>
+				<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu.  The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>
+				<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
+				
+				<?php select_menu(); ?>
+			</nav>
 		</header>
-		<nav id="navigation" role="navigation">
-		  <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
-			<a id="skip" href="#content" title="<?php esc_attr_e( 'Skip to content', 'boilerplate' ); ?>"><?php _e( 'Skip to content', 'boilerplate' ); ?></a>
-			<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu.  The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>
-			<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
-			
-			<?php select_menu(); ?>
-		</nav><!-- #access -->
 		<section id="content" role="main">

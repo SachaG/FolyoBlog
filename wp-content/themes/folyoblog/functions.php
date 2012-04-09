@@ -41,6 +41,14 @@
 // Remove Admin Bar Front End
 add_filter('show_admin_bar', '__return_false');
 
+function folyo_enqueue_scripts() {
+	wp_deregister_script( 'jquery' ); // deregisters the default WordPress jQuery  
+    wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'); // register the external file  
+    wp_enqueue_script('jquery'); // enqueue the external file  
+}    
+add_action('wp_enqueue_scripts', 'folyo_enqueue_scripts');
+
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  *

@@ -32,7 +32,7 @@
 	 */
 	wp_footer();
 ?>
-<?php if($_SERVER['HTTP_HOST']=="sachagreif.com" || $_SERVER['HTTP_HOST']=="v3.sachagreif.com"){?>
+<?php if($_SERVER['HTTP_HOST']=="blog.folyo.me"){?>
 	<script src="//static.getclicky.com/js" type="text/javascript"></script>
 	<script type="text/javascript">try{ clicky.init(66362194); }catch(e){}</script>
 	<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/66362194ns.gif" /></p></noscript>
