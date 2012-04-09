@@ -1,10 +1,11 @@
-body, h1, h2, h3, h4, h5, input, textarea, p{
-	font-family:"Proxima Nova";
+body, input, textarea, p{
+	font-family:"Skolar";
 	color:$text;
 	font-size:18px;
 	line-height:1.7;
 }
 h1, h2, h3, h4, h5{
+	font-family:"Proxima Nova";
 	line-height:1.2;
 }
 h1{

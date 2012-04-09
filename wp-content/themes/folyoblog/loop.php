@@ -130,12 +130,14 @@
 			}
 			?>
 
+
+			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'boilerplate' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+
 			<a href="<?php the_permalink() ?>" class="entry-date">
 				<span class="month"><?php echo get_the_date("M"); ?></span>
-				<span class="day"><?php echo get_the_date("j"); ?></span>
-				<span class="full-date"><?php echo get_the_date("Y/m/d \a\\t g:i a"); ?></span>
+				<span class="day"><?php echo get_the_date("j"); ?></span>, 
+				<span class="year"><?php echo get_the_date("Y"); ?></span>
 			</a>
-			<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'boilerplate' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
 			<div class="entry-meta">
 
