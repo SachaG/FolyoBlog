@@ -5,7 +5,7 @@ body, input, textarea, p{
 	line-height:1.7;
 }
 h1, h2, h3, h4, h5{
-	font-family:"Proxima Nova";
+	// font-family:"Proxima Nova";
 	line-height:1.2;
 }
 h1{
@@ -75,4 +75,22 @@ a:visited{
 }
 a:hover{
 	color:$link-hover;
+	text-decoration:underline;
+}
+#sidebar, header{
+	a:hover{
+		color:white;
+		text-decoration:none;
+	}
+}
+.navigation, .entry-meta{
+	font-variant:small-caps;
+	color:$lighter-text;
+	a{
+		color:$lighter-text;
+		font-weight:normal;
+		&:hover{
+			color:$link;
+		}
+	}
 }

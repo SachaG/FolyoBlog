@@ -20,7 +20,7 @@
 	 */
 	get_sidebar( 'footer' );
 ?>
-<a href="#">↑ Back to top</a>
+
 			<!-- <a href="<?php echo home_url( '/' ) ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> -->
 					<!-- <a href="http://wordpress.org/" title="Semantic Personal Publishing Platform" rel="generator">Proudly powered by WordPress </a> -->
 		</footer><!-- footer -->
@@ -37,5 +37,23 @@
 	<script type="text/javascript">try{ clicky.init(66362194); }catch(e){}</script>
 	<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/66362194ns.gif" /></p></noscript>
 <?php } ?>
+
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1&appId=120226234679972";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+		<!-- Place this render call where appropriate -->
+	<script type="text/javascript">
+	  (function() {
+	    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	    po.src = 'https://apis.google.com/js/plusone.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	  })();
+	</script>
 	</body>
 </html>

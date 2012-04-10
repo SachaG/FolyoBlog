@@ -10,9 +10,6 @@
 <div id="sidebar">
 
 	<ul class="widgets">
-		<li class="widget-container widget_tagline"><h3><span>About</span></h3>
-		<p id="tagline">Hi! I’m Sacha Greif, a designer, coder, and entrepreneur living in Paris. This is my blog, and <a href="http://twitter.com/SachaGreif">I'm on Twitter</a>, too.</p>
-		</li>
 
 	<?php
 		/* When we call the dynamic_sidebar() function, it'll spit out
@@ -43,14 +40,7 @@
 				</li>
 
 			<?php endif; // end primary widget area ?>
-
-
-			<li class="widget-container widget_folyo">
-				<h3><span>My Startup</span></h3>
-			<a href="http://folyo.me"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/folyo-ad-240b.png" alt="Folyo"/></a>
-			<p>Need a designer? <a href="http://folyo.me">Folyo</a> helps companies find great, vetted freelance designers.</p>
-			</li>
-				</ul>
+	</ul>
 
 	<?php
 		// A second sidebar for widgets, just because.

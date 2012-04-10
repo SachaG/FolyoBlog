@@ -41,6 +41,11 @@
 // Remove Admin Bar Front End
 add_filter('show_admin_bar', '__return_false');
 
+function custom_excerpt_length( $length ) {
+	return 25;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
 function folyo_enqueue_scripts() {
 	wp_deregister_script( 'jquery' ); // deregisters the default WordPress jQuery  
     wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'); // register the external file  

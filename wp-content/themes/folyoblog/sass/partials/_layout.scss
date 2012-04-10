@@ -18,11 +18,12 @@ body{
 /*-------------- navigation ---------------*/
 header{
 	width:200px;
+	margin-bottom:40px;
+	float:right;
 	#navigation{
-		float:right;
+		display:none;
 		margin-bottom:50px;
 		font-size:16px;
-		@include letterpress(0.5);
 		#skip{
 			display:none;
 		}
@@ -67,7 +68,7 @@ header{
 #content{
 	background:url("../images/content-bg-middle.png") repeat-y;
 	width:920px;
-	padding:0 120px 0 200px;
+	padding:10px 120px 10px 200px;
 	float:left;
 	position:relative;
 	&:before, &:after{
@@ -87,9 +88,8 @@ header{
 	}
 }
 #sidebar{
-	width:240px;
-	float:left;
-	padding-top:$unit;
+	width:200px;
+	float:right;
 }
 #footer{
 	width:100%;

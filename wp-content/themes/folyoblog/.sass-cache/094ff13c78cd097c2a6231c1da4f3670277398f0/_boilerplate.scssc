@@ -1,7 +1,7 @@
 3.1.15 (Brainy Betty)
-b482a5e91d82ed5aa87b3bd51409b24d16c8947c
+e90eca1b86e1f379af41f998d8abe5ea91a94ecf
 o:Sass::Tree::RootNode
-:@template" /
+:@template"Œ/
 /** START HTML5 Boilerplate CSS **/
 
 /**
@@ -157,8 +157,8 @@ h1, h2, h3, h4, h5, h6 { font-weight: bold; }
 /* These selection declarations have to be separate
    No text-shadow: twitter.com/miketaylr/status/12228805301
    Also: hot pink! */
-::-moz-selection { background: $red; color:#fff; text-shadow: none; }
-::selection { background:$red; color:#fff; text-shadow: none; }
+::-moz-selection { background: $blue1; color:#fff; text-shadow: none; }
+::selection { background:$blue1; color:#fff; text-shadow: none; }
 
 /**
  * Primary styles
@@ -495,9 +495,13 @@ color;i ;	[ o;
 ;0;["Ö/* These selection declarations have to be separate
    No text-shadow: twitter.com/miketaylr/status/12228805301
    Also: hot pink! */;iö;@;	[ ;0o;;o;;" ;[o;;[o;;@Ô;[o;!
-;@Ô;iù;"0;["-moz-selection;;2;iù;iù;iù;@;i ;	[o;;;;o:Sass::Script::Variable	;iù:@underscored_name"red;@;"red;iù;@;["background;i ;	[ o;;;;o;;"	#fff;@;;;iù;@;["
+;@Ô;iù;"0;["-moz-selection;;2;iù;iù;iù;@;i ;	[o;;;;o:Sass::Script::Variable	;iù:@underscored_name"
+blue1;@;"
+blue1;iù;@;["background;i ;	[ o;;;;o;;"	#fff;@;;;iù;@;["
 color;i ;	[ o;;;;o;;"	none;@;;;iù;@;["text-shadow;i ;	[ ;T; ["::-moz-selectiono;;o;;" ;[o;;[o;;@;[o;!
-;@;iû;"0;["selection;;2;iû;iû;iû;@;i ;	[o;;;;o;3	;iû;4"red;@;"red;iû;@;["background;i ;	[ o;;;;o;;"	#fff;@;;;iû;@;["
+;@;iû;"0;["selection;;2;iû;iû;iû;@;i ;	[o;;;;o;3	;iû;4"
+blue1;@;"
+blue1;iû;@;["background;i ;	[ o;;;;o;;"	#fff;@;;;iû;@;["
 color;i ;	[ o;;;;o;;"	none;@;;;iû;@;["text-shadow;i ;	[ ;T; ["::selectiono;
 ;0;[",/**
  * Primary styles
