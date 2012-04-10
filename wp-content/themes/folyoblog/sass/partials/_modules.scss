@@ -66,7 +66,9 @@ header{
 	}
 }
 .entry-date{
-	color:$lighter-text;
+	&, & a, &:visited{
+		color:$lighter-text;
+	}
 	margin-bottom:10px;
 	position:absolute;
 	left:-75px;
@@ -122,6 +124,7 @@ header{
 	}
 	&:hover{
 		text-decoration:none;
+		color:$link;
 		.full-date{
 			margin-top:10px;
 			opacity:1;
