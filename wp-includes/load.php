@@ -329,8 +329,8 @@ function require_wp_db() {
 	global $wpdb;
 
 	require_once( ABSPATH . WPINC . '/wp-db.php' );
-	if ( file_exists( WP_CONTENT_DIR . '/db.php' ) )
-		require_once( WP_CONTENT_DIR . '/db.php' );
+	// if ( file_exists( WP_CONTENT_DIR . '/db.php' ) )
+	// 	require_once( WP_CONTENT_DIR . '/db.php' );
 
 	if ( isset( $wpdb ) )
 		return;
