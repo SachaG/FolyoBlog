@@ -776,11 +776,21 @@ h4 {
   font-size: 18px;
 }
 
-/* line 28, ../sass/partials/_typography.scss */
+/* line 24, ../sass/partials/_typography.scss */
+h5 {
+  font-size: 14px;
+}
+
+/* line 27, ../sass/partials/_typography.scss */
+h6 {
+  font-size: 12px;
+}
+
+/* line 31, ../sass/partials/_typography.scss */
 .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content ul, .entry-content ol, .entry-content p, .entry-content hr, .entry-content blockquote {
   margin: 0 0 30px 0;
 }
-/* line 31, ../sass/partials/_typography.scss */
+/* line 34, ../sass/partials/_typography.scss */
 .entry-content hr {
   border: none;
   background: #e1e1e0;
@@ -788,7 +798,7 @@ h4 {
   width: 690px;
   margin: 60px 0;
 }
-/* line 38, ../sass/partials/_typography.scss */
+/* line 41, ../sass/partials/_typography.scss */
 .entry-content blockquote {
   background: #e1e1e0;
   padding: 30px 30px 0 30px;
@@ -796,19 +806,19 @@ h4 {
   overflow: hidden;
   font-style: italic;
 }
-/* line 45, ../sass/partials/_typography.scss */
+/* line 48, ../sass/partials/_typography.scss */
 .entry-content ul {
   padding-left: 60px;
   color: #eb5f3a;
   list-style-type: none;
 }
-/* line 49, ../sass/partials/_typography.scss */
+/* line 52, ../sass/partials/_typography.scss */
 .entry-content ul li {
   color: #574742;
   position: relative;
   margin-bottom: 10px;
 }
-/* line 54, ../sass/partials/_typography.scss */
+/* line 57, ../sass/partials/_typography.scss */
 .entry-content ul li:before {
   content: "•";
   color: #eb5f3a;
@@ -822,46 +832,46 @@ h4 {
 }
 
 /*-------------- links ---------------*/
-/* line 68, ../sass/partials/_typography.scss */
+/* line 71, ../sass/partials/_typography.scss */
 a {
   color: #4e9ec4;
   font-weight: bold;
   text-decoration: none;
 }
 
-/* line 73, ../sass/partials/_typography.scss */
+/* line 76, ../sass/partials/_typography.scss */
 a:visited {
   color: #4e9ec4;
 }
 
-/* line 76, ../sass/partials/_typography.scss */
+/* line 79, ../sass/partials/_typography.scss */
 a:hover {
   color: #4e9ec4;
   text-decoration: underline;
 }
 
-/* line 81, ../sass/partials/_typography.scss */
+/* line 84, ../sass/partials/_typography.scss */
 #sidebar a:hover, header a:hover {
   color: white;
   text-decoration: none;
 }
 
-/* line 86, ../sass/partials/_typography.scss */
+/* line 89, ../sass/partials/_typography.scss */
 .navigation, .entry-meta {
   font-variant: small-caps;
   color: #a4b5c0;
 }
-/* line 89, ../sass/partials/_typography.scss */
+/* line 92, ../sass/partials/_typography.scss */
 .navigation a, .entry-meta a {
   color: #a4b5c0;
   font-weight: normal;
 }
-/* line 92, ../sass/partials/_typography.scss */
+/* line 95, ../sass/partials/_typography.scss */
 .navigation a:hover, .entry-meta a:hover {
   color: #4e9ec4;
 }
 
-/* line 98, ../sass/partials/_typography.scss */
+/* line 101, ../sass/partials/_typography.scss */
 .wp-caption-text {
   font-family: "ff-market-web";
   font-size: 20px;
