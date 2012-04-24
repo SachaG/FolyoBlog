@@ -54,6 +54,10 @@
 ?>
 	</head>
 	<body <?php body_class(); ?>>
+		<?php 
+		if ( is_singular())
+			echo '<a class="back-to-home" href="/">Back to blog home</a>';
+		?>
 		<div class="container clearfix">
 		<header>
 			<h1 id="logo"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
