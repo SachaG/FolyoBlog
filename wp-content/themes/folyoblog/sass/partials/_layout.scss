@@ -10,7 +10,7 @@ $blueprint-grid-margin: 10px;
 // compass grid-img 30+10x16
 
 body{
-	padding-top:$unit;
+	padding-top:80px;
 }
 .container{
 	width:1150px;
@@ -68,7 +68,6 @@ header{
 #content{
 	background:url("../images/content-bg-middle.png") repeat-y;
 	width:920px;
-	padding:10px 120px 10px 200px;
 	float:left;
 	position:relative;
 	&:before, &:after{
@@ -86,6 +85,10 @@ header{
 		background:url("../images/content-bg-bottom.png") no-repeat;
 		bottom:-30px;
 	}
+	.inner{
+		padding:10px 120px 10px 200px;
+	}
+
 }
 #sidebar{
 	width:200px;

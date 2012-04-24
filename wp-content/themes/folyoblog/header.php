@@ -68,3 +68,4 @@
 			</nav>
 		</header>
 		<section id="content" role="main">
+			<div class="inner">

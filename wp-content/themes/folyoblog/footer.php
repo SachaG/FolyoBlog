@@ -10,6 +10,7 @@
  * @since Boilerplate 1.0
  */
 ?>
+	</div><!-- stitch -->
 		</section><!-- #main -->
 		<?php get_sidebar(); ?>
 		

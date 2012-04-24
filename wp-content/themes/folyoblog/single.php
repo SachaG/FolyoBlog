@@ -14,7 +14,7 @@ get_header();
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-					<div class="entry-share">
+					<!-- <div class="entry-share">
 						<h4>Share:</h4>
 						<div class="share-option" id="twitter">		
 						</div>
@@ -45,20 +45,22 @@ get_header();
 					<div class="entry-meta">
 						<span class="full-date"><?php echo get_the_date("F jS, Y"); ?></span>
 						<?php if ( comments_open() ) comments_popup_link( __( 'Leave a comment', 'boilerplate' ), __( '1 Comment', 'boilerplate' ), __( '% Comments', 'boilerplate' ) , "comments-link"); ?>
-					</div>
+					</div> -->
 
 
 					<?php
 					if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 						?>
-						<div class="entry-image">
-								<?php the_post_thumbnail('full'); ?>
-								<?php 
-								$thumbnail=get_post( get_post_thumbnail_id() );
-								if($thumbnail->post_excerpt){
-									?>
-								<p class="credit">Photo credit: <a target="_blank" href="<?php echo $thumbnail->post_content ?>"><?php echo $thumbnail->post_excerpt ?></a></p>
-								<?php } ?>
+						<div class="featured-image">
+							<div class="entry-image">
+									<?php the_post_thumbnail('full'); ?>
+									<?php 
+									$thumbnail=get_post( get_post_thumbnail_id() );
+									if($thumbnail->post_excerpt){
+										?>
+									<p class="credit">Photo credit: <a target="_blank" href="<?php echo $thumbnail->post_content ?>"><?php echo $thumbnail->post_excerpt ?></a></p>
+									<?php } ?>
+							</div>
 						</div>
 					<?php
 					}
