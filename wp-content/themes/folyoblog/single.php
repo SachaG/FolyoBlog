@@ -70,8 +70,9 @@ get_header();
 
 
 					<h1 class="entry-title"><?php the_title(); ?></h1>
-					
-					<div class="entry-meta">
+
+					<div class="entry-meta clearfix">
+						<div class="left">
 							<?php
 								if ( count( get_the_category() ) ){
 									printf( __( '<span class="entry-category">Posted in %2$s</span>', 'boilerplate' ), 'entry-utility-prep entry-utility-prep-cat-links', get_the_category_list( ', ' ) );
@@ -81,6 +82,16 @@ get_header();
 								}
 							?>
 						</div>
+						<div class="entry-social">
+							<div class="twitter">
+								<a href="https://twitter.com/share" class="twitter-share-button" data-via="YoFolyo" >Tweet</a>
+								<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+							</div>
+							<div class="facebook">
+								<div class="fb-like" data-send="false" data-layout="button_count" data-width="60" data-show-faces="false"></div>
+							</div>
+						</div>
+					</div>
 
 					<?php /* 
 					<div class="entry-instapaper">

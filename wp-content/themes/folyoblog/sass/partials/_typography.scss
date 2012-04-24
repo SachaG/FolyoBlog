@@ -45,18 +45,21 @@ h6{
 		overflow:hidden;
 		font-style:italic;
 	}
+	ol{
+		padding-left:60px;
+	}
 	ul{
 		padding-left:60px;
-		color:$red;
+		color:$blue1;
 		list-style-type:none;
 		li{
-			color:$brown;
+			color:$text;
 			position:relative;
 			margin-bottom:10px;
 		}
 		li:before{
 			content:"•";
-			color:$red;
+			color:$blue1;
 			position:absolute;
 			left:-20px;
 			display:block;
