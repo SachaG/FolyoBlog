@@ -17,7 +17,7 @@ get_header(); ?>
 
 
 <?php
-get_template_part( 'featured', 'index' );
+// get_template_part( 'featured', 'index' );
 ?>
 
 <?php

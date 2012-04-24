@@ -82,14 +82,23 @@
 			if ( has_post_thumbnail() ) $imageClass=" has-thumbnail";
 			?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class("clearfix".$imageClass); ?>>
-								<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'boilerplate' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-
+				<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'boilerplate' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+				<div class="entry-meta">
+					<?php
+						if ( count( get_the_category() ) ){
+							printf( __( '<span class="entry-category">Posted in %2$s</span>', 'boilerplate' ), 'entry-utility-prep entry-utility-prep-cat-links', get_the_category_list( ', ' ) );
+						}		
+						if ( comments_open() ){
+							comments_popup_link( __( 'Leave a comment', 'boilerplate' ), __( '1 Comment', 'boilerplate' ), __( '% Comments', 'boilerplate' ) );
+						}
+					?>
+				</div>
 				<?php
 				if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 					?>
 					<div class="entry-image">
 						<a href="<?php the_permalink() ?>">
-							<?php the_post_thumbnail('medium'); ?>
+							<?php the_post_thumbnail('large'); ?>
 						</a>
 					</div>
 				<?php
@@ -104,9 +113,7 @@
 					<span class="full-date"><?php echo get_the_date("Y/m/d \a\\t g:i a"); ?></span>
 				</a>
 
-				<div class="entry-meta">
-					<?php if ( comments_open() ) comments_popup_link( __( 'Leave a comment', 'boilerplate' ), __( '1 Comment', 'boilerplate' ), __( '% Comments', 'boilerplate' ) ); ?>
-				</div><!-- .entry-meta -->
+	<!-- .entry-meta -->
 
 				<div class="entry-summary">
 					<?php //the_content('<span class="read-more">…</span>'); ?>
@@ -119,10 +126,7 @@
 
 	<?php /*
 				<footer class="entry-utility">
-					<?php if ( count( get_the_category() ) ) : ?>
-						<?php printf( __( 'Posted in %2$s', 'boilerplate' ), 'entry-utility-prep entry-utility-prep-cat-links', get_the_category_list( ', ' ) ); ?>
-						|
-					<?php endif; ?>
+					
 					<?php
 						$tags_list = get_the_tag_list( '', ', ' );
 						if ( $tags_list ):

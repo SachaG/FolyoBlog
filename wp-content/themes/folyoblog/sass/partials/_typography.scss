@@ -1,5 +1,5 @@
 body, input, textarea, p{
-	font-family:"Skolar";
+	font-family:ff-tisa-web-pro, chaparral-pro, skolar;
 	color:$text;
 	font-size:18px;
 	line-height:1.7;
@@ -93,4 +93,10 @@ a:hover{
 			color:$link;
 		}
 	}
+}
+
+.wp-caption-text{
+	font-family:"ff-market-web";
+	font-size:20px;
+	color:$light-text;
 }

@@ -11,7 +11,23 @@ get_header();
 
 ?>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-
+				<?php
+				if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+					?>
+					<div class="featured-image">
+						<div class="entry-image">
+								<?php the_post_thumbnail('full'); ?>
+								<?php 
+								$thumbnail=get_post( get_post_thumbnail_id() );
+								if($thumbnail->post_excerpt){
+									?>
+								<p class="credit">Photo credit: <a target="_blank" href="<?php echo $thumbnail->post_content ?>"><?php echo $thumbnail->post_excerpt ?></a></p>
+								<?php } ?>
+						</div>
+					</div>
+				<?php
+				}
+				?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 					<!-- <div class="entry-share">
@@ -46,27 +62,25 @@ get_header();
 						<span class="full-date"><?php echo get_the_date("F jS, Y"); ?></span>
 						<?php if ( comments_open() ) comments_popup_link( __( 'Leave a comment', 'boilerplate' ), __( '1 Comment', 'boilerplate' ), __( '% Comments', 'boilerplate' ) , "comments-link"); ?>
 					</div> -->
+					<a href="<?php the_permalink() ?>" class="entry-date">
+						<span class="month"><?php echo get_the_date("M"); ?></span>
+						<span class="day"><?php echo get_the_date("j"); ?></span>
+						<span class="full-date"><?php echo get_the_date("Y/m/d \a\\t g:i a"); ?></span>
+					</a>
 
 
-					<?php
-					if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-						?>
-						<div class="featured-image">
-							<div class="entry-image">
-									<?php the_post_thumbnail('full'); ?>
-									<?php 
-									$thumbnail=get_post( get_post_thumbnail_id() );
-									if($thumbnail->post_excerpt){
-										?>
-									<p class="credit">Photo credit: <a target="_blank" href="<?php echo $thumbnail->post_content ?>"><?php echo $thumbnail->post_excerpt ?></a></p>
-									<?php } ?>
-							</div>
-						</div>
-					<?php
-					}
-					?>
 					<h1 class="entry-title"><?php the_title(); ?></h1>
-
+					
+					<div class="entry-meta">
+							<?php
+								if ( count( get_the_category() ) ){
+									printf( __( '<span class="entry-category">Posted in %2$s</span>', 'boilerplate' ), 'entry-utility-prep entry-utility-prep-cat-links', get_the_category_list( ', ' ) );
+								}		
+								if ( comments_open() ){
+									comments_popup_link( __( 'Leave a comment', 'boilerplate' ), __( '1 Comment', 'boilerplate' ), __( '% Comments', 'boilerplate' ) );
+								}
+							?>
+						</div>
 
 					<?php /* 
 					<div class="entry-instapaper">
