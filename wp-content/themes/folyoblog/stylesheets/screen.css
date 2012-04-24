@@ -716,6 +716,30 @@ body {
 /* line 13, ../sass/partials/_base.scss */
 .inner {
   background: url("../images/stitch.png") repeat-y 90px 90px;
+  position: relative;
+}
+/* line 16, ../sass/partials/_base.scss */
+.inner:before, .inner:after {
+  position: absolute;
+  display: block;
+  content: " ";
+  z-index: 200;
+}
+/* line 22, ../sass/partials/_base.scss */
+.inner:before {
+  background: url("../images/decor1.png") no-repeat;
+  height: 274px;
+  width: 83px;
+  top: 1000px;
+  right: -58px;
+}
+/* line 29, ../sass/partials/_base.scss */
+.inner:after {
+  background: url("../images/decor2.png") no-repeat;
+  width: 78px;
+  height: 209px;
+  top: 300px;
+  right: -49px;
 }
 
 /* line 1, ../sass/partials/_typography.scss */
