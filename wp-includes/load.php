@@ -329,8 +329,8 @@ function require_wp_db() {
 	global $wpdb;
 
 	require_once( ABSPATH . WPINC . '/wp-db.php' );
-	if ( file_exists( WP_CONTENT_DIR . '/db.php' ) )
-		echo "db.php found";
+	//modified by sacha
+	if ( false || file_exists( WP_CONTENT_DIR . '/db.php' ) )
 		require_once( WP_CONTENT_DIR . '/db.php' );
 
 	if ( isset( $wpdb ) )
@@ -386,7 +386,8 @@ function wp_start_object_cache() {
 
 	$first_init = false;
  	if ( ! function_exists( 'wp_cache_init' ) ) {
-		if ( file_exists( WP_CONTENT_DIR . '/object-cache.php' ) ) {
+ 		//modified by sacha
+		if ( false || file_exists( WP_CONTENT_DIR . '/object-cache.php' ) ) {
 			require_once ( WP_CONTENT_DIR . '/object-cache.php' );
 			$_wp_using_ext_object_cache = true;
 		} else {
