@@ -29,7 +29,7 @@
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="shortcut icon" href="<?php bloginfo( 'stylesheet_directory' ); ?>/favicon.ico" />
 		
 		<script type="text/javascript" src="http://use.typekit.com/kdx2dsb.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
