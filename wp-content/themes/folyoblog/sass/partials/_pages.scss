@@ -11,10 +11,19 @@ body.page{
 .posts-river{
 	padding-top:10px;
 	.post{
-		padding-bottom:70px;
-		background:url("../images/divider.png") no-repeat bottom center;
+		padding-bottom:60px;
+		background:url("../images/separator4.png") no-repeat bottom center;
 		margin-bottom:50px;
 		position:relative;
+		&:nth-of-type(3n+1){
+			background-image:url("../images/separator4.png");
+		}
+		&:nth-of-type(3n+2){
+			background-image:url("../images/separator5.png");	
+		}
+		&:nth-of-type(3n+3){
+			background-image:url("../images/separator6.png");	
+		}
 		.entry-image{
 			// float:right;
 			// width:200px;

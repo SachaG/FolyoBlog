@@ -117,7 +117,7 @@
 
 				<div class="entry-summary">
 					<?php //the_content('<span class="read-more">…</span>'); ?>
-					<?php the_excerpt('<span class="read-more">…</span>'); ?>
+					<?php the_excerpt('<span class="read-more">Read More…</span>'); ?>
 
 				</div>
 				

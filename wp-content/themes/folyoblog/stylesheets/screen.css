@@ -2076,44 +2076,56 @@ body.page .entry-content {
 }
 /* line 13, ../sass/partials/_pages.scss */
 .posts-river .post {
-  padding-bottom: 70px;
-  background: url("../images/divider.png") no-repeat bottom center;
+  padding-bottom: 60px;
+  background: url("../images/separator4.png") no-repeat bottom center;
   margin-bottom: 50px;
   position: relative;
 }
-/* line 35, ../sass/partials/_pages.scss */
+/* line 18, ../sass/partials/_pages.scss */
+.posts-river .post:nth-of-type(3n+1) {
+  background-image: url("../images/separator4.png");
+}
+/* line 21, ../sass/partials/_pages.scss */
+.posts-river .post:nth-of-type(3n+2) {
+  background-image: url("../images/separator5.png");
+}
+/* line 24, ../sass/partials/_pages.scss */
+.posts-river .post:nth-of-type(3n+3) {
+  background-image: url("../images/separator6.png");
+}
+/* line 44, ../sass/partials/_pages.scss */
 .posts-river .post .entry-title {
   font-size: 30px;
   line-height: 1.3;
   margin-bottom: 10px;
 }
-/* line 40, ../sass/partials/_pages.scss */
+/* line 49, ../sass/partials/_pages.scss */
 .posts-river .post:last-child {
   border: none;
   margin-bottom: 0;
   background: none;
 }
-/* line 45, ../sass/partials/_pages.scss */
+/* line 54, ../sass/partials/_pages.scss */
 .posts-river .post .entry-meta {
   margin-bottom: 20px;
 }
 
 /*-------------- single ---------------*/
-/* line 57, ../sass/partials/_pages.scss */
+/* line 66, ../sass/partials/_pages.scss */
 .single .post .entry-meta {
   margin-bottom: 20px;
 }
-/* line 60, ../sass/partials/_pages.scss */
+/* line 69, ../sass/partials/_pages.scss */
 .single .post .entry-image {
   margin-bottom: 60px;
 }
-/* line 63, ../sass/partials/_pages.scss */
+/* line 72, ../sass/partials/_pages.scss */
 .single .post .entry-title {
   font-size: 36px;
   line-height: 1.3;
   margin-bottom: 20px;
 }
-/* line 68, ../sass/partials/_pages.scss */
+/* line 77, ../sass/partials/_pages.scss */
 .single .post .entry-utility {
   display: none;
 }
