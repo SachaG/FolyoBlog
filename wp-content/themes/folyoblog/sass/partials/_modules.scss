@@ -464,16 +464,14 @@ article.post, article.page{
 		margin:0;
 		padding:0;
 		list-style-type:none;
-		>li{
+		.widget-container{
 			margin-bottom:60px;
 			line-height:1.5;
 			font-size:16px;
 			a{
 				font-weight:normal;
 			}
-		}
-		.widget_recent_entries, .widget_categories{
-			ul{
+			>ul{
 				margin:0;
 				padding:0;
 				list-style-type:none;
@@ -481,8 +479,7 @@ article.post, article.page{
 					margin-bottom:15px;
 				}
 			}
-		}
-		
+		}	
 	}
 }
 #footer{
