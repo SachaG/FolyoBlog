@@ -1788,13 +1788,13 @@ article.post .read-more, article.page .read-more {
   font-weight: normal;
 }
 /* line 474, ../sass/partials/_modules.scss */
-#sidebar .widgets .widget-container > ul {
+#sidebar .widgets .widget-container ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 /* line 478, ../sass/partials/_modules.scss */
-#sidebar .widgets .widget-container > ul li {
+#sidebar .widgets .widget-container ul li {
   margin-bottom: 10px;
 }
 
