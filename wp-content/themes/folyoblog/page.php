@@ -25,5 +25,6 @@ get_header(); ?>
 						<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'boilerplate' ), 'after' => '' ) ); ?>
 					</div><!-- .entry-content -->
 				</article><!-- #post-## -->
+				<?php comments_template( '', true ); ?>
 <?php endwhile; ?>
 <?php get_footer(); ?>
