@@ -117,7 +117,7 @@ get_header();
 					</footer><!-- #entry-author-info -->
 <?php endif; ?>
 					<footer class="entry-follow">
-						<h4>Enjoyed the post? Then you should <span class="follow-twitter"><a href="https://twitter.com/YoFolyo" class="twitter-follow-button" data-show-count="false">Follow Folyo on Twitter</a></span> or <a href="<?php bloginfo('atom_url'); ?>">subscribe to the RSS feed</a>.</h4>
+						<p>Enjoyed the post? Then you should <span class="follow-twitter"><a href="https://twitter.com/YoFolyo" class="twitter-follow-button" data-show-count="false">Follow Folyo on Twitter</a></span> or <a href="<?php bloginfo('atom_url'); ?>">subscribe to the RSS feed</a>.</p>
 					</footer>
 		
 					<footer class="entry-utility">

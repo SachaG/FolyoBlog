@@ -52,3 +52,5 @@ wp-content/w3tc/objectcache/*
 wp-content/w3tc/min/*
 !wp-content/w3tc/min/.htaccess
 !wp-content/w3tc/min/index.php
+
+

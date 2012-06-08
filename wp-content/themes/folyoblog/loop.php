@@ -115,9 +115,9 @@
 
 	<!-- .entry-meta -->
 
-				<div class="entry-summary">
+				<div class="entry-content">
 					<?php //the_content('<span class="read-more">…</span>'); ?>
-					<?php the_excerpt('<span class="read-more">Read More…</span>'); ?>
+					<?php the_content('<span class="read-more">Read More…</span>'); ?>
 
 				</div>
 				
