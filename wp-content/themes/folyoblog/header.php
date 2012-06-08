@@ -27,7 +27,7 @@
 			wp_title( '|', true, 'right' );
 		?></title>
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
-		<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+		<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>?v=2" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<link rel="shortcut icon" href="<?php bloginfo( 'stylesheet_directory' ); ?>/favicon.ico" />
 		
