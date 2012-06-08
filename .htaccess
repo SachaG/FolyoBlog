@@ -37,11 +37,15 @@
     RewriteEngine On
     RewriteBase /
     RewriteRule ^(.*\/)?w3tc_rewrite_test$ $1?w3tc_rewrite_test=1 [L]
+    RewriteCond %{HTTPS} =on
+    RewriteRule .* - [E=W3TC_SSL:_ssl]
+    RewriteCond %{SERVER_PORT} =443
+    RewriteRule .* - [E=W3TC_SSL:_ssl]
     RewriteCond %{HTTP:Accept-Encoding} gzip
     RewriteRule .* - [E=W3TC_ENC:_gzip]
     RewriteCond %{REQUEST_METHOD} !=POST
     RewriteCond %{QUERY_STRING} =""
-    RewriteCond %{HTTP_HOST} =folyoblog
+    RewriteCond %{HTTP_HOST} =blog.folyo.me
     RewriteCond %{REQUEST_URI} \/$ [OR]
     RewriteCond %{REQUEST_URI} (sitemap(_index)?\.xml(\.gz)?|[a-z0-9_\-]+-sitemap([0-9]+)?\.xml(\.gz)?) [NC]
     RewriteCond %{REQUEST_URI} !(\/wp-admin\/|\/xmlrpc.php|\/wp-(app|cron|login|register|mail)\.php|\/feed\/|wp-.*\.php|index\.php) [NC,OR]
