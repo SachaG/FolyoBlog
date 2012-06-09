@@ -2015,3 +2015,110 @@ body.page .entry-content {
   -o-transition-property: opacity, margin-top;
   transition-property: opacity, margin-top;
 }
+
+/* line 2, ../sass/modules/_roundtable.scss */
+.roundtables blockquote {
+  position: relative;
+  font-style: normal;
+  background: none;
+  margin-bottom: 30px;
+  padding: 30px 0 0px 100px;
+  border-bottom: 1px dotted #c3cfd6;
+  border-top: 1px dotted #c3cfd6;
+  overflow: visible;
+}
+/* line 11, ../sass/modules/_roundtable.scss */
+.roundtables blockquote p {
+  background: #e3eaee;
+  padding: 15px 25px;
+  font-size: 16px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  position: relative;
+}
+/* line 17, ../sass/modules/_roundtable.scss */
+.roundtables blockquote p:after {
+  right: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+/* line 26, ../sass/modules/_roundtable.scss */
+.roundtables blockquote p:after {
+  border-right-color: #e3eaee;
+  border-width: 10px;
+  top: 30px;
+  margin-top: -10px;
+}
+/* line 33, ../sass/modules/_roundtable.scss */
+.roundtables blockquote:before {
+  background: #ddd no-repeat top left;
+  height: 60px;
+  width: 60px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  content: " ";
+  display: block;
+  font-size: 14px;
+}
+/* line 45, ../sass/modules/_roundtable.scss */
+.roundtables blockquote:after {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100px;
+  left: -20px;
+  text-align: center;
+  display: block;
+  font-size: 14px;
+  color: #7a8d99;
+}
+/* line 57, ../sass/modules/_roundtable.scss */
+.roundtables blockquote.sacha-g:before {
+  background-image: url("../images/sacha-greif-avatar.jpg");
+}
+/* line 60, ../sass/modules/_roundtable.scss */
+.roundtables blockquote.sacha-g:after {
+  content: "Sacha G.";
+}
+/* line 65, ../sass/modules/_roundtable.scss */
+.roundtables blockquote.aymeric-g:before {
+  background-image: url("../images/aymeric-g-avatar.jpg");
+}
+/* line 68, ../sass/modules/_roundtable.scss */
+.roundtables blockquote.aymeric-g:after {
+  content: "Aymeric G.";
+}
+/* line 73, ../sass/modules/_roundtable.scss */
+.roundtables blockquote.jose-m:before {
+  background-image: url("../images/jose-m-avatar.jpg");
+}
+/* line 76, ../sass/modules/_roundtable.scss */
+.roundtables blockquote.jose-m:after {
+  content: "Jose M.";
+}
+/* line 81, ../sass/modules/_roundtable.scss */
+.roundtables blockquote + blockquote {
+  border-top: none;
+  padding-top: 0px;
+}
+/* line 84, ../sass/modules/_roundtable.scss */
+.roundtables blockquote + blockquote:before {
+  top: 0px;
+}
+/* line 87, ../sass/modules/_roundtable.scss */
+.roundtables blockquote + blockquote:after {
+  top: 70px;
+}

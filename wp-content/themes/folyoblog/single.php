@@ -30,6 +30,7 @@ get_header();
 				?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+					<?php if(false){ ?>
 					<!-- <div class="entry-share">
 						<h4>Share:</h4>
 						<div class="share-option" id="twitter">		
@@ -62,6 +63,7 @@ get_header();
 						<span class="full-date"><?php echo get_the_date("F jS, Y"); ?></span>
 						<?php if ( comments_open() ) comments_popup_link( __( 'Leave a comment', 'boilerplate' ), __( '1 Comment', 'boilerplate' ), __( '% Comments', 'boilerplate' ) , "comments-link"); ?>
 					</div> -->
+					<?php } ?>
 					<a href="<?php the_permalink() ?>" class="entry-date">
 						<span class="month"><?php echo get_the_date("M"); ?></span>
 						<span class="day"><?php echo get_the_date("j"); ?></span>
