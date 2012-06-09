@@ -1,0 +1,283 @@
+.post{
+	position:relative;
+}
+
+.entry-category{
+	display:inline-block;
+	border-right:1px #ccc solid;
+	padding-right:10px;
+	margin-right:10px;
+}
+.entry-image, .wp-caption{
+	padding:15px 15px 10px 15px;
+	background:white;
+	margin-bottom:30px;
+	@include box-shadow(0 1px 3px black(0.35));
+	position:relative;
+	img{
+		display:block;
+		width:570px;
+		height:auto;
+	}
+	.wp-caption-text{
+		text-align:center;
+		margin:0;
+		padding-top:20px;
+	}
+	.credit{
+		margin-top:7px;
+		a{
+			color:$light-text;
+		}
+	}
+	&:before,&:after{
+		position:absolute;
+		content:"";
+		height:110px;
+		width:110px;
+		z-index:10;
+	}
+	&:before{
+		background:url("../images/tape1.png");
+		top:-25px;
+		right:-31px;
+	}
+	&:after{
+		background:url("../images/tape2.png");
+		bottom:-25px;
+		left:-31px;
+	}
+}
+
+
+.entry-follow{
+	margin-bottom:30px;
+	padding:10px 15px 5px 15px;
+	background:$lightgrey1;
+	p{
+		font-size:14px;
+		line-height:1.3;
+		margin-bottom:0;
+		.follow-twitter{
+			display:inline-block;
+			margin:-1px 5px 0 5px;
+			vertical-align:top;
+		}
+	}
+}
+.entry-meta{
+	line-height:24px;
+	padding:8px 0 12px 0;
+	border-top:1px $light-border solid;
+	border-bottom:1px $light-border solid;
+	.left{
+		float: left;
+	}
+	a, span{
+		display:inline-block;
+	}
+	a{
+		color:$light-text;
+		font-weight:bold;
+	}
+}
+.entry-social{
+	float:right;
+	position:relative;
+	top:4px;
+	line-height:1;
+	height:24px;
+	&>div{
+		display:inline-block;
+	}
+	.facebook{
+		position:relative;
+		top:-6px;
+	}
+}
+.featured-image{
+	position:relative;
+	top:-15px;
+	margin-bottom:50px;
+	.post-content{
+		position:relative;
+	}
+	&:before,&:after{
+		display:block;
+		position:absolute;
+		content:" ";
+		background:#eee;
+		background-image:none !important;
+		width:570px;
+		height:320px;
+		border:15px #fefefe solid;
+	}
+	&:before{
+		@include rotate(2deg, false, false);
+		z-index:10;
+		top:-5px;
+		left:0px;
+		@include box-shadow(0 2px 5px black(0.35));
+	}
+	&:after{
+		@include rotate(-4deg, false, false);
+		z-index:20;
+		top:-4px;
+		left:-4px;
+		width:580px;
+		@include box-shadow(0 2px 4px black(0.25));
+	}
+	.entry-image{
+		@include rotate(-2deg, false, false);
+		z-index:50;
+		position:relative;
+		@include box-shadow(0 1px 3px black(0.35));
+		img{
+			margin-bottom:5px;
+		}
+		&:before{
+			display:none;
+		}
+		&:after{
+			background:url("../images/paperclip.png");
+			@include rotate(16deg, false, false);
+			height:110px;
+			width:30px;
+			top:-25px;
+			left:430px;
+			z-index:10;
+		}
+	}
+	.post-title{
+		@include rotate(-3deg, false, false);
+		background:white;
+		padding:340px 15px 15px 15px;
+		@include box-shadow(0 1px 3px black(0.35));
+		position:absolute;
+		z-index:30;
+		width:580px;
+		left:10px;
+		top:0px;
+		.entry-title{
+			margin:0;
+			font-size:18px;
+			line-height:1.3;
+			text-align:center;
+			font-family:"ff-market-web";
+		}
+	}
+	.post-content{
+		display:none;
+	}
+}
+/*-------------- share ---------------*/
+.entry-share{
+	display:none;
+	padding:15px 30px;
+	overflow:hidden;
+	h3, h4{
+		float:left;
+		margin:0 30px 0 0;
+		line-height:30px;
+	}
+	.share-option{
+		float:left;
+		margin-right:30px;
+		.box{
+			overflow:hidden;
+			 .share{
+				height:30px;
+				width:30px;
+				@include hide-text;
+				float:left;
+				margin-right:5px;
+			}
+			.count{
+				float:right;
+				width:60px;
+				line-height:30px;
+				height:30px;
+				padding:0 10px 0 0;
+				background:$lightbeige url("../images/pictos.png") no-repeat 0 -330px;
+				@include border-radius(3px);
+				text-align:right;
+				font-size:16px;
+			}
+			&:hover .count{
+				background-position:0 -330px;
+				color:$brown;
+			}
+		}
+	}
+	#twitter{ 
+		.share{
+			background:url("../images/pictos.png") no-repeat 0 -120px;
+		}
+		&:hover .share{
+			background-position:0 -150px;
+		}
+	}
+	#facebook{
+		.share{
+			background:url("../images/pictos.png") no-repeat 0 -180px;
+		
+		}
+		&:hover .share{
+			background-position:0 -210px;
+		}
+	}
+	#googleplus{
+		.share{
+			background:url("../images/pictos.png") no-repeat 0 -240px;
+		}
+		&:hover .share{
+			background-position:0 -270px;
+		}
+	}
+}
+
+/*-------------- title ---------------*/
+.entry-title{
+	line-height:1;
+	margin-bottom:10px;
+	font-size:36px;
+	margin-bottom:44px;
+	a{
+		color:$text;
+		&:visited{
+			color:$text;
+		}
+		&:hover{
+			color:$link;
+			text-decoration:none;
+		}
+	}
+}
+/*-------------- note ---------------*/
+.entry-content h5, .note{
+	background:$lightyellow;
+	color:$darkyellow;
+	font-weight:normal;
+	padding:30px 30px 30px 60px;
+	font-size:16px;
+	line-height:1.7;
+	position:relative;
+	&:after{
+		content:"Note";
+		display:block;
+		position:absolute;
+		top:0;
+		left:0;
+		padding:2px 6px;
+		text-transform:uppercase;
+		font-weight:bold;
+		background:#f9ec6e;
+		font-size:12px;
+	}
+}
+
+.entry-content{
+	h3{
+		margin-top:60px;
+	}
+}
