@@ -68,6 +68,7 @@ header{
 #content{
 	background:url("../images/content-bg-middle.png") repeat-y;
 	width:920px;
+	min-height:1400px;
 	float:left;
 	position:relative;
 	&:before, &:after{

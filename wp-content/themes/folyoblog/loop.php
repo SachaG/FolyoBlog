@@ -140,12 +140,17 @@
 				*/?>
 			</article><!-- #post-## -->
 
-			<?php comments_template( '', true ); ?>
+			
 
 		<?php endif; // This was the if statement that broke the loop into three parts based on categories. ?>
 
 	<?php endwhile; // End the loop. Whew. ?>
 </div>
+
+<div class="comments-wrapper">
+	<?php comments_template( '', true ); ?>
+</div>
+
 <?php /* Display navigation to next/previous pages when applicable */ ?>
 <?php if (  $wp_query->max_num_pages > 1 ) : ?>
 	<nav id="nav-below" class="navigation">
