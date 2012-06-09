@@ -38,6 +38,19 @@
  * @since Boilerplate 1.0
  */
 
+function folyoblog_enqueue_styles() {
+	wp_enqueue_style('main-style', get_bloginfo('stylesheet_url'), array(), '1', 'screen');
+}
+
+function folyoblog_enqueue_scripts() {
+	// wp_enqueue_script( 'fancybox', get_stylesheet_directory_uri(). '/js/jquery.fancybox.pack.js', array(), 1, true  );
+}
+if(!is_admin()){
+	add_action('wp_enqueue_scripts', 'folyoblog_enqueue_styles');
+	add_action('wp_enqueue_scripts', 'folyoblog_enqueue_scripts');
+} 
+
+
 // Remove Admin Bar Front End
 add_filter('show_admin_bar', '__return_false');
 
