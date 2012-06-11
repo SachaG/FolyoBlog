@@ -39,7 +39,7 @@
  */
 
 function folyoblog_enqueue_styles() {
-	wp_enqueue_style('main-style', get_bloginfo('stylesheet_url'), array(), '2', 'screen');
+	wp_enqueue_style('main-style', get_bloginfo('stylesheet_url'), array(), '3', 'screen');
 }
 
 function folyoblog_enqueue_scripts() {
