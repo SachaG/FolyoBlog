@@ -22,7 +22,10 @@
 	.wp-caption-text{
 		text-align:center;
 		margin:0;
-		padding-top:20px;
+		padding-top:15px;
+		text-transform:uppercase;
+		color:$lighter-text;
+		font-size:16px;
 	}
 	.credit{
 		margin-top:7px;
@@ -279,5 +282,20 @@
 .entry-content{
 	h3{
 		margin-top:60px;
+		background:url("../images/header-bg-1.png") no-repeat;
+		height:60px;
+		padding:0 20px;
+		line-height:60px;
+		color:fade_out($text, 0.25);
+		font-size:24px;
+		&:nth-of-type(3n+1){
+			background:url("../images/header-bg-1.png") no-repeat;
+		}
+		&:nth-of-type(3n+2){
+			background:url("../images/header-bg-2.png") no-repeat;	
+		}
+		&:nth-of-type(3n+3){
+			background:url("../images/header-bg-3.png") no-repeat;		
+		}
 	}
 }

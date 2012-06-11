@@ -28,6 +28,11 @@ get_header();
 				<?php
 				}
 				?>
+				<a href="<?php the_permalink() ?>" class="entry-date">
+					<span class="month"><?php echo get_the_date("M"); ?></span>
+					<span class="day"><?php echo get_the_date("j"); ?></span>
+					<span class="full-date"><?php echo get_the_date("Y/m/d \a\\t g:i a"); ?></span>
+				</a>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 					<?php if(false){ ?>
@@ -64,14 +69,9 @@ get_header();
 						<?php if ( comments_open() ) comments_popup_link( __( 'Leave a comment', 'boilerplate' ), __( '1 Comment', 'boilerplate' ), __( '% Comments', 'boilerplate' ) , "comments-link"); ?>
 					</div> -->
 					<?php } ?>
-					<a href="<?php the_permalink() ?>" class="entry-date">
-						<span class="month"><?php echo get_the_date("M"); ?></span>
-						<span class="day"><?php echo get_the_date("j"); ?></span>
-						<span class="full-date"><?php echo get_the_date("Y/m/d \a\\t g:i a"); ?></span>
-					</a>
+			
 
 
-					<h1 class="entry-title"><?php the_title(); ?></h1>
 
 					<div class="entry-meta clearfix">
 						<div class="left">
@@ -94,6 +94,7 @@ get_header();
 							</div>
 						</div>
 					</div>
+					<h1 class="entry-title"><?php the_title(); ?></h1>
 
 					<?php /* 
 					<div class="entry-instapaper">

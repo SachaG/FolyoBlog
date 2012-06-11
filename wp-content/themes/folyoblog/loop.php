@@ -82,7 +82,6 @@
 			if ( has_post_thumbnail() ) $imageClass=" has-thumbnail";
 			?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class("clearfix".$imageClass); ?>>
-				<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'boilerplate' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 				<div class="entry-meta">
 					<?php
 						if ( count( get_the_category() ) ){
@@ -93,6 +92,7 @@
 						}
 					?>
 				</div>
+
 				<?php
 				if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 					?>
@@ -105,6 +105,7 @@
 				}
 				?>
 
+				<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'boilerplate' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
 	
 				<a href="<?php the_permalink() ?>" class="entry-date">

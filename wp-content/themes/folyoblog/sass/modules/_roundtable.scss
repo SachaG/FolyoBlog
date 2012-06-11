@@ -1,4 +1,4 @@
-.roundtables{
+.category-roundtables{
 	blockquote{
 		position:relative;
 		font-style:normal;
@@ -10,11 +10,21 @@
 		overflow:visible;
 		p{
 			background:#e3eaee;
+			background:#fff;
 			padding:15px 25px;
 			font-size:16px;
-			@include border-radius(3px);
+			// @include border-radius(3px);
 			position: relative;
 			margin-bottom:0;
+			@include box-shadow(0 1px 2px black(0.25));
+			&:first-child{
+				@include border-top-left-radius(3px);
+				@include border-top-right-radius(3px);
+			}
+			&:last-child{
+				@include border-bottom-left-radius(3px);
+				@include border-bottom-right-radius(3px);
+			}
 			&:first-child:after {
 				right: 100%;
 				border: solid transparent;
@@ -23,9 +33,22 @@
 				width: 0;
 				position: absolute;
 				pointer-events: none;
-				border-right-color: #e3eaee;
+				border-right-color: #fff;
 				border-width: 10px;
 				top: 30px;
+				margin-top: -10px;
+			}
+			&:first-child:before {
+				right: 100%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+				border-right-color: black(0.06);
+				border-width: 10px;
+				top: 32px;
 				margin-top: -10px;
 			}
 		}
