@@ -10,7 +10,14 @@
 <div id="sidebar">
 
 	<ul class="widgets">
-
+		<li id="must-read" class="widget-container">	
+			<h3 class="widget-title"><span>Read This First</span></h3>
+				<ul>
+				<li><a href="http://folyo.me/guides/how_to_pick_a_great_designer" title="How to Pick a Great Designer">How to Pick a Great Designer</a></li>
+				<li><a href="http://folyo.me/guides/how_to_write_a_good_job_description" title="How to Write a Good Job Description">How to Write a Good Job Description</a></li>
+				<li><a href="/how-much-does-a-website-cost-and-other-pricing-questions/" title="How Much Does a Website Cost?">How Much Does a Website Cost?</a></li>
+				</ul>
+		</li>
 	<?php
 		/* When we call the dynamic_sidebar() function, it'll spit out
 		 * the widgets for that widget area. If it instead returns false,
