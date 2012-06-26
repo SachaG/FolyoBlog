@@ -9,7 +9,9 @@
  * Copyright (c) 2011 Prelovac Media
  * www.prelovac.com
  **************************************************************/
-
+if(basename($_SERVER['SCRIPT_FILENAME']) == "link.class.php"):
+    exit;
+endif;
 class MMB_Link extends MMB_Core
 {
     function __construct()
@@ -130,7 +132,7 @@ FROM $wpdb->links AS l
 INNER JOIN $wpdb->term_relationships ON ( l.link_id = $wpdb->term_relationships.object_id )
 INNER JOIN $wpdb->term_taxonomy ON ( $wpdb->term_relationships.term_taxonomy_id = $wpdb->term_taxonomy.term_taxonomy_id
 AND $wpdb->term_taxonomy.taxonomy = '".$taxonomy."' )
-INNER JOIN $wpdb->terms ON ( $wpdb->term_taxonomy.term_taxonomy_id = $wpdb->terms.term_id )");
+INNER JOIN $wpdb->terms ON ( $wpdb->term_taxonomy.term_id = $wpdb->terms.term_id )");
 		
 		foreach ( $cats as $post_val )
 		{
