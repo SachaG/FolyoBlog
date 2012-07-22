@@ -1512,7 +1512,6 @@ body.page .entry-content {
   border-bottom: 1px solid #dee5e9;
   margin-bottom: 40px;
   position: relative;
-  position: relative;
 }
 /* line 10, ../sass/modules/_posts-river.scss */
 .posts-river .post:after {
@@ -1525,28 +1524,28 @@ body.page .entry-content {
   bottom: 2px;
   left: 0px;
 }
-/* line 30, ../sass/modules/_posts-river.scss */
+/* line 29, ../sass/modules/_posts-river.scss */
 .posts-river .post:last-of-type {
   background-image: none;
   margin-bottom: 0px;
 }
-/* line 51, ../sass/modules/_posts-river.scss */
+/* line 50, ../sass/modules/_posts-river.scss */
 .posts-river .post .entry-title {
   font-size: 30px;
   line-height: 1.3;
   margin-bottom: 20px;
 }
-/* line 56, ../sass/modules/_posts-river.scss */
+/* line 55, ../sass/modules/_posts-river.scss */
 .posts-river .post:last-child {
   border: none;
   margin-bottom: 0;
   background: none;
 }
-/* line 61, ../sass/modules/_posts-river.scss */
+/* line 60, ../sass/modules/_posts-river.scss */
 .posts-river .post .entry-meta {
   margin-bottom: 20px;
 }
-/* line 65, ../sass/modules/_posts-river.scss */
+/* line 64, ../sass/modules/_posts-river.scss */
 .posts-river .post .entry-content > p:last-child {
   margin-bottom: 0;
 }

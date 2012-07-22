@@ -44,6 +44,15 @@ function folyoblog_enqueue_styles() {
 
 function folyoblog_enqueue_scripts() {
 	// wp_enqueue_script( 'fancybox', get_stylesheet_directory_uri(). '/js/jquery.fancybox.pack.js', array(), 1, true  );
+	/* We add some JavaScript to pages with the comment form
+	* to support sites with threaded comments (when in use).
+	*/
+	// if ( is_singular() && get_option( 'thread_comments' ) )
+	// wp_enqueue_script( 'comment-reply' );
+
+	// if (is_singular())
+	// wp_enqueue_script( 'sharrre', get_template_directory_uri(). '/js/jquery.sharrre-1.1.0.min.js', array(), 1, true );
+	// wp_enqueue_script( 'fancybox', get_template_directory_uri(). '/js/jquery.fancybox.pack.js', array(), 1, true  );
 }
 if(!is_admin()){
 	add_action('wp_enqueue_scripts', 'folyoblog_enqueue_styles');
