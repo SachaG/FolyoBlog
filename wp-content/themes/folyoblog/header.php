@@ -30,9 +30,12 @@
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<link rel="shortcut icon" href="<?php bloginfo( 'stylesheet_directory' ); ?>/favicon.ico" />
 		
+		<!--
 		<script type="text/javascript" src="http://use.typekit.com/kdx2dsb.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		-->
 		
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>		
 <?php
 		/* We add some JavaScript to pages with the comment form
 		 * to support sites with threaded comments (when in use).

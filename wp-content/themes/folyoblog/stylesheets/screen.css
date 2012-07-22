@@ -745,17 +745,15 @@ body {
 
 /* line 1, ../sass/partials/_typography.scss */
 body, input, textarea, p {
-  font-family: "proxima nova", ff-tisa-web-pro, chaparral-pro, skolar;
+  font-family: "Open Sans", "proxima nova", ff-tisa-web-pro, chaparral-pro, skolar;
   color: #485056;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.7;
 }
 
 /* line 7, ../sass/partials/_typography.scss */
 h1, h2, h3, h4, h5, .navigation {
-  font-family: "ff-market-web","Proxima Nova";
   line-height: 1.2;
-  text-transform: uppercase;
 }
 
 /* line 12, ../sass/partials/_typography.scss */

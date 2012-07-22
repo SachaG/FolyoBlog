@@ -5,6 +5,8 @@ staging_nrfight_tv.csr
 staging_nrfight_tv.key
 
 *.scssc
+wp-content/themes/folyoblog/.sass-cache/
+wp-content/themes/folyoblog/.sass-cache/*
 
 # Compiled source #
 ###################
@@ -49,7 +51,15 @@ Thumbs.db
 wp-content/w3-total-cache-config.php
 wp-content/w3-total-cache-config-preview.php
 wp-content/w3tc/objectcache/*
+
 wp-content/w3tc/min/*
 !wp-content/w3tc/min/.htaccess
 !wp-content/w3tc/min/index.php
+
+wp-content/w3tc/dbcache/*
+!wp-content/w3tc/dbcache/.htaccess
+!wp-content/w3tc/dbcache/index.php
+
+wp-content/w3tc/pgcache/*
+
 
