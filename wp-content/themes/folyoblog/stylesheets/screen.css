@@ -1508,31 +1508,45 @@ body.page .entry-content {
 }
 /* line 3, ../sass/modules/_posts-river.scss */
 .posts-river .post {
-  margin-bottom: 100px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #dee5e9;
+  margin-bottom: 40px;
+  position: relative;
   position: relative;
 }
-/* line 17, ../sass/modules/_posts-river.scss */
+/* line 10, ../sass/modules/_posts-river.scss */
+.posts-river .post:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: #c3cfd6;
+  bottom: 2px;
+  left: 0px;
+}
+/* line 30, ../sass/modules/_posts-river.scss */
 .posts-river .post:last-of-type {
   background-image: none;
   margin-bottom: 0px;
 }
-/* line 38, ../sass/modules/_posts-river.scss */
+/* line 51, ../sass/modules/_posts-river.scss */
 .posts-river .post .entry-title {
   font-size: 30px;
   line-height: 1.3;
   margin-bottom: 20px;
 }
-/* line 43, ../sass/modules/_posts-river.scss */
+/* line 56, ../sass/modules/_posts-river.scss */
 .posts-river .post:last-child {
   border: none;
   margin-bottom: 0;
   background: none;
 }
-/* line 48, ../sass/modules/_posts-river.scss */
+/* line 61, ../sass/modules/_posts-river.scss */
 .posts-river .post .entry-meta {
   margin-bottom: 20px;
 }
-/* line 52, ../sass/modules/_posts-river.scss */
+/* line 65, ../sass/modules/_posts-river.scss */
 .posts-river .post .entry-content > p:last-child {
   margin-bottom: 0;
 }
@@ -1713,13 +1727,13 @@ body.page .entry-content {
 /* line 56, ../sass/modules/_post.scss */
 .entry-follow {
   margin-bottom: 30px;
-  padding: 10px 15px 5px 15px;
+  padding: 15px;
   background: #dee5e9;
 }
 /* line 60, ../sass/modules/_post.scss */
 .entry-follow p {
   font-size: 14px;
-  line-height: 1.3;
+  line-height: 1.7;
   margin-bottom: 0;
 }
 /* line 64, ../sass/modules/_post.scss */
@@ -2011,23 +2025,24 @@ body.page .entry-content {
 
 /* line 283, ../sass/modules/_post.scss */
 .entry-content h3 {
+  font-weight: 100;
   margin-top: 60px;
   background: url("../images/header-bg-1.png") no-repeat;
   height: 60px;
-  padding: 0 20px;
+  padding: 0 15px;
   line-height: 60px;
   color: rgba(72, 80, 86, 0.75);
   font-size: 24px;
 }
-/* line 291, ../sass/modules/_post.scss */
+/* line 292, ../sass/modules/_post.scss */
 .entry-content h3:nth-of-type(3n+1) {
   background: url("../images/header-bg-1.png") no-repeat;
 }
-/* line 294, ../sass/modules/_post.scss */
+/* line 295, ../sass/modules/_post.scss */
 .entry-content h3:nth-of-type(3n+2) {
   background: url("../images/header-bg-2.png") no-repeat;
 }
-/* line 297, ../sass/modules/_post.scss */
+/* line 298, ../sass/modules/_post.scss */
 .entry-content h3:nth-of-type(3n+3) {
   background: url("../images/header-bg-3.png") no-repeat;
 }
@@ -2046,14 +2061,15 @@ body.page .entry-content {
   background: #e3eaee;
   background: #fff;
   padding: 15px 25px;
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 2;
   position: relative;
   margin-bottom: 0;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
-/* line 20, ../sass/modules/_roundtable.scss */
+/* line 21, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote p:first-child {
   -moz-border-radius-topleft: 3px;
   -webkit-border-top-left-radius: 3px;
@@ -2066,7 +2082,7 @@ body.page .entry-content {
   -o-border-top-right-radius: 3px;
   border-top-right-radius: 3px;
 }
-/* line 24, ../sass/modules/_roundtable.scss */
+/* line 25, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote p:last-child {
   -moz-border-radius-bottomleft: 3px;
   -webkit-border-bottom-left-radius: 3px;
@@ -2079,7 +2095,7 @@ body.page .entry-content {
   -o-border-bottom-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
-/* line 28, ../sass/modules/_roundtable.scss */
+/* line 29, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote p:first-child:after {
   right: 100%;
   border: solid transparent;
@@ -2093,7 +2109,7 @@ body.page .entry-content {
   top: 30px;
   margin-top: -10px;
 }
-/* line 41, ../sass/modules/_roundtable.scss */
+/* line 42, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote p:first-child:before {
   right: 100%;
   border: solid transparent;
@@ -2107,11 +2123,11 @@ body.page .entry-content {
   top: 32px;
   margin-top: -10px;
 }
-/* line 55, ../sass/modules/_roundtable.scss */
+/* line 56, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote p + p {
   padding-top: 0;
 }
-/* line 58, ../sass/modules/_roundtable.scss */
+/* line 59, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote:before {
   background: #ddd no-repeat top left;
   height: 60px;
@@ -2128,7 +2144,7 @@ body.page .entry-content {
   display: block;
   font-size: 14px;
 }
-/* line 70, ../sass/modules/_roundtable.scss */
+/* line 71, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote:after {
   position: absolute;
   top: 70px;
@@ -2140,40 +2156,40 @@ body.page .entry-content {
   font-size: 14px;
   color: #7a8d99;
 }
-/* line 82, ../sass/modules/_roundtable.scss */
+/* line 83, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote.sacha-g:before {
   background-image: url("../images/sacha-greif-avatar.jpg");
 }
-/* line 85, ../sass/modules/_roundtable.scss */
+/* line 86, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote.sacha-g:after {
   content: "Sacha G.";
 }
-/* line 90, ../sass/modules/_roundtable.scss */
+/* line 91, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote.aymeric-g:before {
   background-image: url("../images/aymeric-g-avatar.jpg");
 }
-/* line 93, ../sass/modules/_roundtable.scss */
+/* line 94, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote.aymeric-g:after {
   content: "Aymeric G.";
 }
-/* line 98, ../sass/modules/_roundtable.scss */
+/* line 99, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote.jose-m:before {
   background-image: url("../images/jose-m-avatar.jpg");
 }
-/* line 101, ../sass/modules/_roundtable.scss */
+/* line 102, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote.jose-m:after {
   content: "Jose M.";
 }
-/* line 106, ../sass/modules/_roundtable.scss */
+/* line 107, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote + blockquote {
   border-top: none;
   padding-top: 0px;
 }
-/* line 109, ../sass/modules/_roundtable.scss */
+/* line 110, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote + blockquote:before {
   top: 0px;
 }
-/* line 112, ../sass/modules/_roundtable.scss */
+/* line 113, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote + blockquote:after {
   top: 70px;
 }
