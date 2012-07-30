@@ -1690,19 +1690,18 @@ body.page .entry-content {
   text-align: center;
   margin: 0;
   padding-top: 15px;
-  text-transform: uppercase;
   color: #a4b5c0;
   font-size: 16px;
 }
-/* line 31, ../sass/modules/_post.scss */
+/* line 30, ../sass/modules/_post.scss */
 .entry-image .credit, .wp-caption .credit {
   margin-top: 7px;
 }
-/* line 33, ../sass/modules/_post.scss */
+/* line 32, ../sass/modules/_post.scss */
 .entry-image .credit a, .wp-caption .credit a {
   color: #7a8d99;
 }
-/* line 37, ../sass/modules/_post.scss */
+/* line 36, ../sass/modules/_post.scss */
 .entry-image:before, .entry-image:after, .wp-caption:before, .wp-caption:after {
   position: absolute;
   content: "";
@@ -1710,60 +1709,60 @@ body.page .entry-content {
   width: 110px;
   z-index: 10;
 }
-/* line 44, ../sass/modules/_post.scss */
+/* line 43, ../sass/modules/_post.scss */
 .entry-image:before, .wp-caption:before {
   background: url("../images/tape1.png");
   top: -25px;
   right: -31px;
 }
-/* line 49, ../sass/modules/_post.scss */
+/* line 48, ../sass/modules/_post.scss */
 .entry-image:after, .wp-caption:after {
   background: url("../images/tape2.png");
   bottom: -25px;
   left: -31px;
 }
 
-/* line 57, ../sass/modules/_post.scss */
+/* line 56, ../sass/modules/_post.scss */
 .entry-follow {
   margin-bottom: 30px;
   padding: 15px;
   background: #dee5e9;
 }
-/* line 61, ../sass/modules/_post.scss */
+/* line 60, ../sass/modules/_post.scss */
 .entry-follow p {
   font-size: 14px;
   line-height: 1.7;
   margin-bottom: 0;
 }
-/* line 65, ../sass/modules/_post.scss */
+/* line 64, ../sass/modules/_post.scss */
 .entry-follow p .follow-twitter {
   display: inline-block;
   margin: -1px 5px 0 5px;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
-/* line 72, ../sass/modules/_post.scss */
+/* line 71, ../sass/modules/_post.scss */
 .entry-meta {
   line-height: 24px;
   padding: 8px 0 12px 0;
   border-top: 1px #dee5e9 solid;
   border-bottom: 1px #dee5e9 solid;
 }
-/* line 77, ../sass/modules/_post.scss */
+/* line 76, ../sass/modules/_post.scss */
 .entry-meta .left {
   float: left;
 }
-/* line 80, ../sass/modules/_post.scss */
+/* line 79, ../sass/modules/_post.scss */
 .entry-meta a, .entry-meta span {
   display: inline-block;
 }
-/* line 83, ../sass/modules/_post.scss */
+/* line 82, ../sass/modules/_post.scss */
 .entry-meta a {
   color: #7a8d99;
   font-weight: bold;
 }
 
-/* line 88, ../sass/modules/_post.scss */
+/* line 87, ../sass/modules/_post.scss */
 .entry-social {
   float: right;
   position: relative;
@@ -1771,27 +1770,27 @@ body.page .entry-content {
   line-height: 1;
   height: 24px;
 }
-/* line 94, ../sass/modules/_post.scss */
+/* line 93, ../sass/modules/_post.scss */
 .entry-social > div {
   display: inline-block;
 }
-/* line 97, ../sass/modules/_post.scss */
+/* line 96, ../sass/modules/_post.scss */
 .entry-social .facebook {
   position: relative;
   top: -6px;
 }
 
-/* line 102, ../sass/modules/_post.scss */
+/* line 101, ../sass/modules/_post.scss */
 .featured-image {
   position: relative;
   top: -15px;
   margin-bottom: 50px;
 }
-/* line 106, ../sass/modules/_post.scss */
+/* line 105, ../sass/modules/_post.scss */
 .featured-image .post-content {
   position: relative;
 }
-/* line 109, ../sass/modules/_post.scss */
+/* line 108, ../sass/modules/_post.scss */
 .featured-image:before, .featured-image:after {
   display: block;
   position: absolute;
@@ -1802,7 +1801,7 @@ body.page .entry-content {
   height: 320px;
   border: 15px #fefefe solid;
 }
-/* line 119, ../sass/modules/_post.scss */
+/* line 118, ../sass/modules/_post.scss */
 .featured-image:before {
   -webkit-transform: rotate(2deg);
   -moz-transform: rotate(2deg);
@@ -1816,7 +1815,7 @@ body.page .entry-content {
   -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
 }
-/* line 126, ../sass/modules/_post.scss */
+/* line 125, ../sass/modules/_post.scss */
 .featured-image:after {
   -webkit-transform: rotate(-4deg);
   -moz-transform: rotate(-4deg);
@@ -1831,7 +1830,7 @@ body.page .entry-content {
   -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
-/* line 134, ../sass/modules/_post.scss */
+/* line 133, ../sass/modules/_post.scss */
 .featured-image .entry-image {
   -webkit-transform: rotate(-2deg);
   -moz-transform: rotate(-2deg);
@@ -1844,15 +1843,15 @@ body.page .entry-content {
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
 }
-/* line 139, ../sass/modules/_post.scss */
+/* line 138, ../sass/modules/_post.scss */
 .featured-image .entry-image img {
   margin-bottom: 5px;
 }
-/* line 142, ../sass/modules/_post.scss */
+/* line 141, ../sass/modules/_post.scss */
 .featured-image .entry-image:before {
   display: none;
 }
-/* line 145, ../sass/modules/_post.scss */
+/* line 144, ../sass/modules/_post.scss */
 .featured-image .entry-image:after {
   background: url("../images/paperclip.png");
   -webkit-transform: rotate(16deg);
@@ -1866,7 +1865,7 @@ body.page .entry-content {
   left: 430px;
   z-index: 10;
 }
-/* line 155, ../sass/modules/_post.scss */
+/* line 154, ../sass/modules/_post.scss */
 .featured-image .post-title {
   -webkit-transform: rotate(-3deg);
   -moz-transform: rotate(-3deg);
@@ -1884,7 +1883,7 @@ body.page .entry-content {
   left: 10px;
   top: 0px;
 }
-/* line 165, ../sass/modules/_post.scss */
+/* line 164, ../sass/modules/_post.scss */
 .featured-image .post-title .entry-title {
   margin: 0;
   font-size: 18px;
@@ -1892,34 +1891,34 @@ body.page .entry-content {
   text-align: center;
   font-family: "ff-market-web";
 }
-/* line 173, ../sass/modules/_post.scss */
+/* line 172, ../sass/modules/_post.scss */
 .featured-image .post-content {
   display: none;
 }
 
 /*-------------- share ---------------*/
-/* line 178, ../sass/modules/_post.scss */
+/* line 177, ../sass/modules/_post.scss */
 .entry-share {
   display: none;
   padding: 15px 30px;
   overflow: hidden;
 }
-/* line 182, ../sass/modules/_post.scss */
+/* line 181, ../sass/modules/_post.scss */
 .entry-share h3, .entry-share h4 {
   float: left;
   margin: 0 30px 0 0;
   line-height: 30px;
 }
-/* line 187, ../sass/modules/_post.scss */
+/* line 186, ../sass/modules/_post.scss */
 .entry-share .share-option {
   float: left;
   margin-right: 30px;
 }
-/* line 190, ../sass/modules/_post.scss */
+/* line 189, ../sass/modules/_post.scss */
 .entry-share .share-option .box {
   overflow: hidden;
 }
-/* line 192, ../sass/modules/_post.scss */
+/* line 191, ../sass/modules/_post.scss */
 .entry-share .share-option .box .share {
   height: 30px;
   width: 30px;
@@ -1929,7 +1928,7 @@ body.page .entry-content {
   float: left;
   margin-right: 5px;
 }
-/* line 199, ../sass/modules/_post.scss */
+/* line 198, ../sass/modules/_post.scss */
 .entry-share .share-option .box .count {
   float: right;
   width: 60px;
@@ -1945,60 +1944,60 @@ body.page .entry-content {
   text-align: right;
   font-size: 16px;
 }
-/* line 210, ../sass/modules/_post.scss */
+/* line 209, ../sass/modules/_post.scss */
 .entry-share .share-option .box:hover .count {
   background-position: 0 -330px;
   color: #574742;
 }
-/* line 217, ../sass/modules/_post.scss */
+/* line 216, ../sass/modules/_post.scss */
 .entry-share #twitter .share {
   background: url("../images/pictos.png") no-repeat 0 -120px;
 }
-/* line 220, ../sass/modules/_post.scss */
+/* line 219, ../sass/modules/_post.scss */
 .entry-share #twitter:hover .share {
   background-position: 0 -150px;
 }
-/* line 225, ../sass/modules/_post.scss */
+/* line 224, ../sass/modules/_post.scss */
 .entry-share #facebook .share {
   background: url("../images/pictos.png") no-repeat 0 -180px;
 }
-/* line 229, ../sass/modules/_post.scss */
+/* line 228, ../sass/modules/_post.scss */
 .entry-share #facebook:hover .share {
   background-position: 0 -210px;
 }
-/* line 234, ../sass/modules/_post.scss */
+/* line 233, ../sass/modules/_post.scss */
 .entry-share #googleplus .share {
   background: url("../images/pictos.png") no-repeat 0 -240px;
 }
-/* line 237, ../sass/modules/_post.scss */
+/* line 236, ../sass/modules/_post.scss */
 .entry-share #googleplus:hover .share {
   background-position: 0 -270px;
 }
 
 /*-------------- title ---------------*/
-/* line 244, ../sass/modules/_post.scss */
+/* line 243, ../sass/modules/_post.scss */
 .entry-title {
   line-height: 1;
   margin-bottom: 10px;
   font-size: 36px;
   margin-bottom: 44px;
 }
-/* line 249, ../sass/modules/_post.scss */
+/* line 248, ../sass/modules/_post.scss */
 .entry-title a {
   color: #485056;
 }
-/* line 251, ../sass/modules/_post.scss */
+/* line 250, ../sass/modules/_post.scss */
 .entry-title a:visited {
   color: #485056;
 }
-/* line 254, ../sass/modules/_post.scss */
+/* line 253, ../sass/modules/_post.scss */
 .entry-title a:hover {
   color: #4e9ec4;
   text-decoration: none;
 }
 
 /*-------------- note ---------------*/
-/* line 261, ../sass/modules/_post.scss */
+/* line 260, ../sass/modules/_post.scss */
 .entry-content h5, .note {
   background: #fef9c7;
   color: #8d7825;
@@ -2008,7 +2007,7 @@ body.page .entry-content {
   line-height: 1.7;
   position: relative;
 }
-/* line 269, ../sass/modules/_post.scss */
+/* line 268, ../sass/modules/_post.scss */
 .entry-content h5:after, .note:after {
   content: "Note";
   display: block;
@@ -2022,7 +2021,7 @@ body.page .entry-content {
   font-size: 12px;
 }
 
-/* line 284, ../sass/modules/_post.scss */
+/* line 283, ../sass/modules/_post.scss */
 .entry-content h3 {
   font-weight: 100;
   margin-top: 60px;
@@ -2033,15 +2032,15 @@ body.page .entry-content {
   color: rgba(72, 80, 86, 0.75);
   font-size: 24px;
 }
-/* line 293, ../sass/modules/_post.scss */
+/* line 292, ../sass/modules/_post.scss */
 .entry-content h3:nth-of-type(3n+1) {
   background: url("../images/header-bg-1.png") no-repeat;
 }
-/* line 296, ../sass/modules/_post.scss */
+/* line 295, ../sass/modules/_post.scss */
 .entry-content h3:nth-of-type(3n+2) {
   background: url("../images/header-bg-2.png") no-repeat;
 }
-/* line 299, ../sass/modules/_post.scss */
+/* line 298, ../sass/modules/_post.scss */
 .entry-content h3:nth-of-type(3n+3) {
   background: url("../images/header-bg-3.png") no-repeat;
 }

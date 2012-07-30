@@ -39,6 +39,9 @@
 	<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/66567886ns.gif" /></p></noscript>
 <?php } ?>
 
+
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
