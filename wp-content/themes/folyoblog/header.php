@@ -54,7 +54,10 @@
 		<div class="container clearfix">
 		<header>
 			<h1 id="logo"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<p id="tagline"><a href="http://folyo.me">Folyo</a> is a private job board that helps you find great, hand-picked designers.</p>
+			<div class="tagline">
+				<p>I'm <a href="http://sachagreif.com" target="_blank">Sacha Greif</a>, a designer &amp; entrepreneur living in Kyoto. </p>
+				<p>These are my notes about running <a href="http://folyo.me">Folyo</a>, a private job board that helps startups find great hand-picked designers.</p>
+			</div>
 			<nav id="navigation" role="navigation">
 			  <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
 				<a id="skip" href="#content" title="<?php esc_attr_e( 'Skip to content', 'boilerplate' ); ?>"><?php _e( 'Skip to content', 'boilerplate' ); ?></a>
