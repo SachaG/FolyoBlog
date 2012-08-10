@@ -2179,15 +2179,31 @@ body.page .entry-content {
   content: "Jose M.";
 }
 /* line 107, ../sass/modules/_roundtable.scss */
+.category-roundtables blockquote.paddy:before {
+  background-image: url("../images/paddy-avatar.jpg");
+}
+/* line 110, ../sass/modules/_roundtable.scss */
+.category-roundtables blockquote.paddy:after {
+  content: "Paddy";
+}
+/* line 115, ../sass/modules/_roundtable.scss */
+.category-roundtables blockquote.rachel:before {
+  background-image: url("../images/rachel-avatar.jpg");
+}
+/* line 118, ../sass/modules/_roundtable.scss */
+.category-roundtables blockquote.rachel:after {
+  content: "Rachel";
+}
+/* line 123, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote + blockquote {
   border-top: none;
   padding-top: 0px;
 }
-/* line 110, ../sass/modules/_roundtable.scss */
+/* line 126, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote + blockquote:before {
   top: 0px;
 }
-/* line 113, ../sass/modules/_roundtable.scss */
+/* line 129, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote + blockquote:after {
   top: 70px;
 }

@@ -103,6 +103,22 @@
 				content:"Jose M.";
 			}
 		}
+		&.paddy{
+			&:before{
+				background-image:url("../images/paddy-avatar.jpg");
+			}
+			&:after{
+				content:"Paddy";
+			}
+		}
+		&.rachel{
+			&:before{
+				background-image:url("../images/rachel-avatar.jpg");
+			}
+			&:after{
+				content:"Rachel";
+			}
+		}
 	}
 	blockquote+blockquote{
 		border-top:none;
