@@ -118,6 +118,22 @@
 			&:after{
 				content:"Rachel";
 			}
+		}	
+		&.jonathan{
+			&:before{
+				background-image:url("../images/jonathan-avatar.jpg");
+			}
+			&:after{
+				content:"Rachel";
+			}
+		}
+		&.neil{
+			&:before{
+				background-image:url("../images/neil-avatar.jpg");
+			}
+			&:after{
+				content:"Rachel";
+			}		
 		}
 	}
 	blockquote+blockquote{

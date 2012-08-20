@@ -1593,17 +1593,14 @@ body.page .entry-content {
   opacity: 0;
   -webkit-transition-property: opacity, margin-top;
   -moz-transition-property: opacity, margin-top;
-  -ms-transition-property: opacity, margin-top;
   -o-transition-property: opacity, margin-top;
   transition-property: opacity, margin-top;
   -webkit-transition-duration: 300ms;
   -moz-transition-duration: 300ms;
-  -ms-transition-duration: 300ms;
   -o-transition-duration: 300ms;
   transition-duration: 300ms;
   -webkit-transition-timing-function: ease-in;
   -moz-transition-timing-function: ease-in;
-  -ms-transition-timing-function: ease-in;
   -o-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
   -webkit-border-radius: 10px;
@@ -1649,7 +1646,6 @@ body.page .entry-content {
   opacity: 1;
   -webkit-transition-property: opacity, margin-top;
   -moz-transition-property: opacity, margin-top;
-  -ms-transition-property: opacity, margin-top;
   -o-transition-property: opacity, margin-top;
   transition-property: opacity, margin-top;
   z-index: 1000;
@@ -2071,26 +2067,18 @@ body.page .entry-content {
 .category-roundtables blockquote p:first-child, .category-case-studies blockquote p:first-child {
   -moz-border-radius-topleft: 3px;
   -webkit-border-top-left-radius: 3px;
-  -ms-border-top-left-radius: 3px;
-  -o-border-top-left-radius: 3px;
   border-top-left-radius: 3px;
   -moz-border-radius-topright: 3px;
   -webkit-border-top-right-radius: 3px;
-  -ms-border-top-right-radius: 3px;
-  -o-border-top-right-radius: 3px;
   border-top-right-radius: 3px;
 }
 /* line 25, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote p:last-child, .category-case-studies blockquote p:last-child {
   -moz-border-radius-bottomleft: 3px;
   -webkit-border-bottom-left-radius: 3px;
-  -ms-border-bottom-left-radius: 3px;
-  -o-border-bottom-left-radius: 3px;
   border-bottom-left-radius: 3px;
   -moz-border-radius-bottomright: 3px;
   -webkit-border-bottom-right-radius: 3px;
-  -ms-border-bottom-right-radius: 3px;
-  -o-border-bottom-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
 /* line 29, ../sass/modules/_roundtable.scss */
@@ -2195,15 +2183,31 @@ body.page .entry-content {
   content: "Rachel";
 }
 /* line 123, ../sass/modules/_roundtable.scss */
+.category-roundtables blockquote.jonathan:before, .category-case-studies blockquote.jonathan:before {
+  background-image: url("../images/jonathan-avatar.jpg");
+}
+/* line 126, ../sass/modules/_roundtable.scss */
+.category-roundtables blockquote.jonathan:after, .category-case-studies blockquote.jonathan:after {
+  content: "Rachel";
+}
+/* line 131, ../sass/modules/_roundtable.scss */
+.category-roundtables blockquote.neil:before, .category-case-studies blockquote.neil:before {
+  background-image: url("../images/neil-avatar.jpg");
+}
+/* line 134, ../sass/modules/_roundtable.scss */
+.category-roundtables blockquote.neil:after, .category-case-studies blockquote.neil:after {
+  content: "Rachel";
+}
+/* line 139, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote + blockquote, .category-case-studies blockquote + blockquote {
   border-top: none;
   padding-top: 0px;
 }
-/* line 126, ../sass/modules/_roundtable.scss */
+/* line 142, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote + blockquote:before, .category-case-studies blockquote + blockquote:before {
   top: 0px;
 }
-/* line 129, ../sass/modules/_roundtable.scss */
+/* line 145, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote + blockquote:after, .category-case-studies blockquote + blockquote:after {
   top: 70px;
 }
