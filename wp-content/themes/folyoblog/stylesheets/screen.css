@@ -2188,7 +2188,7 @@ body.page .entry-content {
 }
 /* line 126, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote.jonathan:after, .category-case-studies blockquote.jonathan:after {
-  content: "Rachel";
+  content: "Jonathan";
 }
 /* line 131, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote.neil:before, .category-case-studies blockquote.neil:before {
@@ -2196,7 +2196,7 @@ body.page .entry-content {
 }
 /* line 134, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote.neil:after, .category-case-studies blockquote.neil:after {
-  content: "Rachel";
+  content: "Neil";
 }
 /* line 139, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote + blockquote, .category-case-studies blockquote + blockquote {
