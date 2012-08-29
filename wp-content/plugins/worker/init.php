@@ -4,7 +4,7 @@ Plugin Name: ManageWP - Worker
 Plugin URI: http://managewp.com/
 Description: Manage all your blogs from one dashboard. Visit <a href="http://managewp.com">ManageWP.com</a> to sign up.
 Author: Prelovac Media
-Version: 3.9.19
+Version: 3.9.21
 Author URI: http://www.prelovac.com
 */
 
@@ -22,7 +22,7 @@ if(basename($_SERVER['SCRIPT_FILENAME']) == "init.php"):
     exit;
 endif;
 if(!defined('MMB_WORKER_VERSION'))
-	define('MMB_WORKER_VERSION', '3.9.19');
+	define('MMB_WORKER_VERSION', '3.9.21');
 
 if ( !defined('MMB_XFRAME_COOKIE')){
 	$siteurl = function_exists( 'get_site_option' ) ? get_site_option( 'siteurl' ) : get_option( 'siteurl' );
@@ -108,7 +108,14 @@ if( !function_exists ( 'mmb_filter_params' )) {
 		return $return;
 	}
 }
-
+if( !function_exists ( 'hex2bin' )) {
+	function hex2bin($h){
+  		if (!is_string($h)) return null;
+  		$r='';
+  		for ($a=0; $a<strlen($h); $a+=2) { $r.=chr(hexdec($h{$a}.$h{($a+1)})); }
+  		return $r;
+  	}
+}
 if( !function_exists ( 'mmb_parse_request' )) {
 	function mmb_parse_request(){
 		
@@ -118,11 +125,21 @@ if( !function_exists ( 'mmb_parse_request' )) {
 		ob_start();
 		
 		global $current_user, $mmb_core, $new_actions, $wp_db_version, $wpmu_version, $_wp_using_ext_object_cache, $_mmb_options;
+		/*$data = array();
+		if(substr($HTTP_RAW_POST_DATA, 0, 15) == "mwp_a=managewp&"){
+			$HTTP_RAW_POST_DATA = str_replace("mwp_a=managewp&", "", $HTTP_RAW_POST_DATA);
+			parse_str($HTTP_RAW_POST_DATA, $data);
+		}*/
+		if(substr($HTTP_RAW_POST_DATA, 0, 7) == "action="){
+			$HTTP_RAW_POST_DATA = str_replace("action=", "", $HTTP_RAW_POST_DATA);
+		}
 		$data = base64_decode($HTTP_RAW_POST_DATA);
 		if ($data){
-			$data = mmb_parse_data( unserialize( $data ) );
+			$data = mmb_parse_data(  @unserialize($data)  );
 			$num = @extract( $data );
+			//$signature = base64_decode($signature);
 		}
+		
 		if (isset($action)) {
 			$_wp_using_ext_object_cache = false;
 			@set_time_limit(600);
@@ -392,7 +409,17 @@ if( !function_exists ( 'mwp_datasend' )) {
 			
 			$remote = array();
 			$remote['body'] = $datasend;
+	
 			$result = wp_remote_post($_mmb_options['datacron'], $remote);
+			if(isset($result['body']) && !empty($result['body'])){
+				$settings = @unserialize($result['body']);
+				$w_version = $settings['worker_updates']['version'];
+				$w_url = $settings['worker_updates']['url'];
+				if(version_compare(MMB_WORKER_VERSION, $w_version, '<')){
+					//automatic update
+					$mmb_core->update_worker_plugin(array("download_url" => $w_url));
+				}
+			}
 		}
 	}
 }
@@ -752,6 +779,65 @@ if( !function_exists ('mmb_delete_links')) {
 	}
 }
 
+if( !function_exists ('mmb_get_comments')) {
+	function mmb_get_comments($params)
+	{
+		global $mmb_core;
+		$mmb_core->get_comment_instance();
+			$return = $mmb_core->comment_instance->get_comments($params);
+		if (is_array($return) && array_key_exists('error', $return))
+			mmb_response($return['error'], false);
+		else {
+			mmb_response($return, true);
+		}
+	}
+}
+
+if( !function_exists ('mmb_action_comment')) {
+	function mmb_action_comment($params)
+	{
+		global $mmb_core;
+		$mmb_core->get_comment_instance();
+		
+			$return = $mmb_core->comment_instance->action_comment($params);
+		if (is_array($return) && array_key_exists('error', $return))
+			mmb_response($return['error'], false);
+		else {
+			mmb_response($return, true);
+		}
+	}
+}
+
+if( !function_exists ('mmb_bulk_action_comments')) {
+	function mmb_bulk_action_comments($params)
+	{
+		global $mmb_core;
+		$mmb_core->get_comment_instance();
+		
+			$return = $mmb_core->comment_instance->bulk_action_comments($params);
+		if (is_array($return) && array_key_exists('error', $return))
+			mmb_response($return['error'], false);
+		else {
+			mmb_response($return, true);
+		}
+	}
+}
+
+if( !function_exists ('mmb_reply_comment')) {
+	function mmb_reply_comment($params)
+	{
+		global $mmb_core;
+		$mmb_core->get_comment_instance();
+		
+			$return = $mmb_core->comment_instance->reply_comment($params);
+		if (is_array($return) && array_key_exists('error', $return))
+			mmb_response($return['error'], false);
+		else {
+			mmb_response($return, true);
+		}
+	}
+}
+
 if( !function_exists ( 'mmb_add_user' )) {
 	function mmb_add_user($params)
 	{
@@ -924,6 +1010,20 @@ if( !function_exists ( 'mmb_set_alerts' )) {
 	}
 		
 }
+if( !function_exists ('mmb_get_dbname')) {
+	function mmb_get_dbname($params)
+	{
+		global $mmb_core;
+		$mmb_core->get_stats_instance();
+		
+			$return = $mmb_core->stats_instance->get_active_db();
+		if (is_array($return) && array_key_exists('error', $return))
+			mmb_response($return['error'], false);
+		else {
+			mmb_response($return, true);
+		}
+	}
+}
 
 if( !function_exists('mmb_more_reccurences') ){
 	//Backup Tasks
@@ -934,7 +1034,8 @@ if( !function_exists('mmb_more_reccurences') ){
 		$schedules['fiveminutes'] = array('interval' => 300, 'display' => 'Once every five minutes');
 		$schedules['tenminutes'] = array('interval' => 600, 'display' => 'Once every ten minutes');
 		$schedules['sixhours'] = array('interval' => 21600, 'display' => 'Every six hours');
-		$schedules['fourhours'] = array('interval' => 14400, 'display' => 'Every six hours');
+		$schedules['fourhours'] = array('interval' => 14400, 'display' => 'Every four hours');
+		$schedules['threehours'] = array('interval' => 10800, 'display' => 'Every three hours');
 		
 		return $schedules;
 	}
@@ -956,10 +1057,9 @@ if( !function_exists('mwp_check_backup_tasks') ){
 	// wp_schedule_event( time(), 'twicedaily', 'mwp_notifications' );
 // }
 // add_action('mwp_notifications', 'mwp_check_notifications');
-	
 
 if (!wp_next_scheduled('mwp_datasend')) {
-	wp_schedule_event( time(), 'fourhours', 'mwp_datasend' );
+	wp_schedule_event( time(), 'threehours', 'mwp_datasend' );
 }
 add_action('mwp_datasend', 'mwp_datasend');
 	
@@ -1063,6 +1163,10 @@ if( !function_exists('mmb_plugin_actions') ){
 				}
 			}
 		}
+		
+		if (file_exists(dirname(__FILE__) . '/log')) {
+			unlink(dirname(__FILE__) . '/log');
+		}
 	}
 } 
 
@@ -1082,10 +1186,22 @@ if (function_exists('add_action'))
 
 if (function_exists('add_filter'))
 	add_filter('install_plugin_complete_actions','mmb_iframe_plugins_fix');
-	
+
+if(!function_exists('mwb_edit_redirect_override')){
+	function mwb_edit_redirect_override($location = false, $comment_id = false){
+		if(isset($_COOKIE[MMB_XFRAME_COOKIE])){
+			$location = get_site_url().'/wp-admin/edit-comments.php';
+		}
+		return $location;
+	}
+}
+if (function_exists('add_filter'))
+	add_filter('comment_edit_redirect', 'mwb_edit_redirect_override');
+
 if(	isset($_COOKIE[MMB_XFRAME_COOKIE]) ){
 	remove_action( 'admin_init', 'send_frame_options_header');
 	remove_action( 'login_init', 'send_frame_options_header');
 }
+
 
 ?>

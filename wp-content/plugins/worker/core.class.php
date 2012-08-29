@@ -107,6 +107,10 @@ class MMB_Core extends MMB_Helper
 			'add_link' => 'mmb_add_link',
 			'delete_link' => 'mmb_delete_link',
 			'delete_links' => 'mmb_delete_links',
+			'get_comments' => 'mmb_get_comments',
+			'action_comment' => 'mmb_action_comment',
+			'bulk_action_comments' => 'mmb_bulk_action_comments',
+			'replyto_comment' => 'mmb_reply_comment',
 			'add_user' => 'mmb_add_user',
 			'email_backup' => 'mmb_email_backup',
 			'check_backup_compat' => 'mmb_check_backup_compat',
@@ -129,7 +133,8 @@ class MMB_Core extends MMB_Helper
 			'edit_plugins_themes' => 'mmb_edit_plugins_themes',
 			'worker_brand' => 'mmb_worker_brand',
 			'set_alerts' => 'mmb_set_alerts',
-			'maintenance' => 'mmb_maintenance_mode'
+			'maintenance' => 'mmb_maintenance_mode',
+			'get_dbname' => 'mmb_get_dbname'
 		);
 		
 		add_action('rightnow_end', array( &$this, 'add_right_now_info' ));       
@@ -418,11 +423,10 @@ class MMB_Core extends MMB_Helper
             delete_option('_action_message_id');
         }
         
-        delete_option('mwp_backup_tasks');
+        //delete_option('mwp_backup_tasks');
         delete_option('mwp_notifications');
         delete_option('mwp_worker_brand');
         delete_option('mwp_pageview_alerts');
-        
     }
     
     /**
@@ -457,7 +461,7 @@ class MMB_Core extends MMB_Helper
 							delete_blog_option($blog_id, '_worker_public_key');
 							delete_blog_option($blog_id, '_action_message_id');
 							delete_blog_option($blog_id, 'mwp_maintenace_mode');
-							delete_blog_option($blog_id, 'mwp_backup_tasks');
+							//delete_blog_option($blog_id, 'mwp_backup_tasks');
 							delete_blog_option($blog_id, 'mwp_notifications');
 							delete_blog_option($blog_id, 'mwp_worker_brand');
 							delete_blog_option($blog_id, 'mwp_pageview_alerts');
@@ -481,7 +485,7 @@ class MMB_Core extends MMB_Helper
         
         //Delete options
 		delete_option('mwp_maintenace_mode');
-        delete_option('mwp_backup_tasks');
+        //delete_option('mwp_backup_tasks');
         delete_option('mwp_notifications');
         delete_option('mwp_worker_brand');
         delete_option('mwp_pageview_alerts');

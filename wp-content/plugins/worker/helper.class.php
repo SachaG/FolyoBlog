@@ -30,7 +30,12 @@ class MMB_Helper
             $mixed = ob_get_clean();
         }
         
-        $handle = fopen(dirname(__FILE__) . '/log', 'a');
+        $md5 = get_option('mwp_log_md5');
+        if ($md5 === false) {
+        	$md5 = md5(date('jS F Y h:i:s A'));
+        	update_option('mwp_log_md5', $md5);
+        }
+        $handle = fopen(dirname(__FILE__) . '/log_'.$md5, 'a');
         fwrite($handle, $mixed . PHP_EOL);
         fclose($handle);
       }
@@ -113,7 +118,7 @@ class MMB_Helper
 				foreach($params['item_filter'] as $_items){
 					if(!empty($_items)){
 						foreach($_items as $_item){
-							if(in_array($_item[0], $_mmb_item_filter[$key])){
+							if(isset($_item[0]) && in_array($_item[0], $_mmb_item_filter[$key])){
 								$_item[1] = isset($_item[1]) ? $_item[1] : array();
 								$return = call_user_func(array( &$call_object, 'get_'.$_item[0]), $return, $_item[1]);
 							}
@@ -514,6 +519,7 @@ class MMB_Helper
     }
     
 	function is_server_writable(){
+		
 		if((!defined('FTP_HOST') || !defined('FTP_USER') || !defined('FTP_PASS')) && (get_filesystem_method(array(), false) != 'direct'))
 			return false;
 		else
@@ -522,24 +528,19 @@ class MMB_Helper
 	
 	function mmb_download_url($url, $file_name)
 	{
-    if (function_exists('fopen') && function_exists('ini_get') && ini_get('allow_url_fopen') == true && ($destination = @fopen($file_name, 'wb')) && ($source = @fopen($url, "r")) ) {
-    
-    
-    while ($a = @fread($source, 1024* 1024)) {
-    @fwrite($destination, $a);
-    }
-    
-    fclose($source);
-    fclose($destination);
-    } else 
-    if (!fsockopen_download($url, $file_name))
-        die('Error downloading file ' . $url);
-    return $file_name;
-	 }
-	 
-	 
-		
-		
-    
+	    if (function_exists('fopen') && function_exists('ini_get') && ini_get('allow_url_fopen') == true && ($destination = @fopen($file_name, 'wb')) && ($source = @fopen($url, "r")) ) {
+	    
+	    while ($a = @fread($source, 1024* 1024)) {
+	    @fwrite($destination, $a);
+	    }
+	    
+	    fclose($source);
+	    fclose($destination);
+	    } else 
+	    if (!fsockopen_download($url, $file_name))
+	        die('Error downloading file ' . $url);
+	    return $file_name;
+	}
+	     
 }
 ?>
