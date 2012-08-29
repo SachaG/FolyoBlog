@@ -126,7 +126,7 @@ if($submit_quiz){
   // NOTE: SYSTEM DEPENDENT HEADACHE
   //ob_start();
   setcookie("wpss-submitter",$submitter_id);
-  wp_redirect(esc_url($redirect_to['url']));
+  wp_redirect(esc_url($redirect_to['url'])."&score=".$score);
   //ob_flush();
   
   

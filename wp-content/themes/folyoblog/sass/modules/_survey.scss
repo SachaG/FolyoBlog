@@ -1,3 +1,38 @@
+.form-panel fieldset:before{
+	height:250px;
+	width:560px;
+	content:" ";
+	display:block;
+	margin-bottom:20px;
+	background:url(../images/quiz1.jpg) no-repeat;
+}
+#panel2 fieldset:before{
+	background-image:url(../images/quiz2.jpg);
+}
+#panel3 fieldset:before{
+	background-image:url(../images/quiz3.jpg);
+}
+#panel4 fieldset:before{
+	background-image:url(../images/quiz4.jpg);
+}
+#panel5 fieldset:before{
+	background-image:url(../images/quiz5.jpg);
+}
+#panel6 fieldset:before{
+	background-image:url(../images/quiz6.jpg);
+}
+#panel7 fieldset:before{
+	background-image:url(../images/quiz7.jpg);
+}
+#panel8 fieldset:before{
+	background-image:url(../images/quiz8.jpg);
+}
+#panel9 fieldset:before{
+	background-image:url(../images/quiz9.jpg);
+}
+#panel10 fieldset:before{
+	background-image:url(../images/quiz10.jpg);
+}
 #wpss_survey{
 	.form-container{
 		#progress{
@@ -40,6 +75,43 @@
 			}
 		}
 	}
+}
+.result{
+	background:white;
+	@include box-shadow(0 1px 2px black(0.25));
+	@include border-radius(3px);
+	padding:20px;
+	.score{
+		@include cf;
+		padding:20px;
+		margin-bottom:20px;
+		background:$lightgrey2;
+		.scored{
+			float:left;
+			p{
+				margin-bottom:3px;
+			}
+			h4{
+				font-size:36px;
+				margin-bottom:0;
+				span{
+					font-size:18px;
+				}
+			}
+		}
+		.share{
+			float:right;
+			p{
+				margin-bottom:10px;
+				font-size:12px;
+				text-align:center;
+			}
+			.tweet{
+				padding:0 10px;
+			}
+		}
+	}
+	
 }
 /* WPSS Super-Container 
 -----------------------------------------------------------*/
