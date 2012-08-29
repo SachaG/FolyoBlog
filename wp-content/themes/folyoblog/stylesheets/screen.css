@@ -2214,18 +2214,21 @@ body.page .entry-content {
 
 /* line 3, ../sass/modules/_survey.scss */
 #wpss_survey .form-container #progress {
-  box-shadow: white 0 1px 0, inset rgba(0, 0, 0, 0.2) 0 1px 0;
-  background: rgba(0, 0, 0, 0.1);
+  box-shadow: white 0 1px 0, inset rgba(0, 0, 0, 0.15) 0 1px 0;
+  background: rgba(0, 0, 0, 0.07);
   margin-bottom: 20px;
   border: 0;
 }
 /* line 8, ../sass/modules/_survey.scss */
 #wpss_survey .form-container #progress label, #wpss_survey .form-container #progress p {
-  line-height: 26px;
-  font-size: 11px;
+  line-height: 35px;
+  font-size: 13px;
   vertical-align: middle;
+  font-weight: bold;
+  padding: 0 10px;
+  margin: 0;
 }
-/* line 13, ../sass/modules/_survey.scss */
+/* line 16, ../sass/modules/_survey.scss */
 #wpss_survey .form-container #progress .ui-progressbar-value {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #59aad1), color-stop(100%, #3680a3));
   background-image: -webkit-linear-gradient(#59aad1, #3680a3);
@@ -2235,7 +2238,7 @@ body.page .entry-content {
   border: none;
   margin: 0;
 }
-/* line 19, ../sass/modules/_survey.scss */
+/* line 22, ../sass/modules/_survey.scss */
 #wpss_survey .form-container .form-panel {
   background: white;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
@@ -2261,16 +2264,16 @@ body.page .entry-content {
 #wpss_survey .form-container .form-panel:after {
   clear: both;
 }
-/* line 27, ../sass/modules/_survey.scss */
+/* line 30, ../sass/modules/_survey.scss */
 #wpss_survey .form-container #submitButton {
   float: right;
 }
-/* line 31, ../sass/modules/_survey.scss */
+/* line 34, ../sass/modules/_survey.scss */
 #wpss_survey .form-container #thanks h3 {
   background: none;
   padding: 0;
 }
-/* line 35, ../sass/modules/_survey.scss */
+/* line 38, ../sass/modules/_survey.scss */
 #wpss_survey .form-container #thanks #submitButton {
   display: block;
   background: #4e9ec4;
@@ -2323,78 +2326,45 @@ body.page .entry-content {
 
 /* WPSS Super-Container 
 -----------------------------------------------------------*/
-/* line 43, ../sass/modules/_survey.scss */
+/* line 46, ../sass/modules/_survey.scss */
 #wpss_survey {
   color: #333;
 }
 
-/* line 46, ../sass/modules/_survey.scss */
+/* line 49, ../sass/modules/_survey.scss */
 #wpss_survey h2 {
   display: none;
 }
 
 /* Quiz Component Contaner */
-/* line 51, ../sass/modules/_survey.scss */
-#wpss_survey .form-container {
-  margin: 0 auto;
-  position: relative;
-  font-size: 12px;
-  padding: 20px;
-}
-
-/* line 58, ../sass/modules/_survey.scss */
+/* line 57, ../sass/modules/_survey.scss */
 #wpss_survey .form-panel fieldset {
   margin: auto;
-  padding: 22px 0 0;
-  margin-top: 20px;
-  /* Gap between Progress bar and form feild */
 }
 
 /* Progress bar text */
-/* line 65, ../sass/modules/_survey.scss */
+/* line 62, ../sass/modules/_survey.scss */
 #wpss_survey p.pgress {
   float: left;
-  vertical-align: top;
-  font-size: 11px;
-  font-weight: bold;
-  margin: 0 0 0 6px;
-  color: #333;
-  height: 1em;
-  padding: 0px;
 }
 
-/* line 73, ../sass/modules/_survey.scss */
+/* line 65, ../sass/modules/_survey.scss */
 #wpss_survey label#amount {
   float: right;
-  vertical-align: top;
-  font-size: 9px;
-  font-weight: bold;
-  margin: 2px 5px 0 0;
-  color: #333;
-  height: 1em;
-  padding: 0px;
 }
 
 /* Question */
-/* line 83, ../sass/modules/_survey.scss */
+/* line 70, ../sass/modules/_survey.scss */
 #wpss_survey p.form_question {
   text-align: left;
-  padding: 0 20px 20px 20px;
-  margin-top: 0;
-  font-size: 14px;
-  /*  width:440px;*/
-  margin-bottom: 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 20px;
 }
 
 /* Radio Set of Answers*/
-/* line 93, ../sass/modules/_survey.scss */
-#wpss_survey .answer {
-  margin: 0 20px 20px 20px;
-  padding-bottom: 10px;
-}
-
 /* Label - Answers, Answer set Style */
-/* line 99, ../sass/modules/_survey.scss */
+/* line 82, ../sass/modules/_survey.scss */
 #wpss_survey .form-panel label {
   /* width:415px; */
   /*  float:right;*/
@@ -2405,7 +2375,7 @@ body.page .entry-content {
 }
 
 /* radio and checkbox input */
-/* line 107, ../sass/modules/_survey.scss */
+/* line 90, ../sass/modules/_survey.scss */
 #wpss_survey .wpss_radio {
   /*  width:25px;*/
   padding: 0;
@@ -2413,12 +2383,12 @@ body.page .entry-content {
   margin-right: 10px;
 }
 
-/* line 113, ../sass/modules/_survey.scss */
+/* line 96, ../sass/modules/_survey.scss */
 #wpss_survey .answer .answer_text {
   margin-bottom: 15px;
 }
 
-/* line 116, ../sass/modules/_survey.scss */
+/* line 99, ../sass/modules/_survey.scss */
 #wpss_survey .clear {
   clear: both;
   font-size: 1px;
@@ -2429,7 +2399,7 @@ body.page .entry-content {
   *  Defualt form image assumes centered, you can override specific questions with:
   *  #wpss_survey #panel{N} fieldset img{} or include style inline to image
  */
-/* line 127, ../sass/modules/_survey.scss */
+/* line 110, ../sass/modules/_survey.scss */
 #wpss_survey .form-panel fieldset img {
   max-width: 95%;
   padding: 0;
@@ -2437,20 +2407,21 @@ body.page .entry-content {
 }
 
 /* Custom Field Inputs */
-/* line 136, ../sass/modules/_survey.scss */
+/* line 119, ../sass/modules/_survey.scss */
 #wpss_survey .form-panel input, #wpss_survey .form-panel textarea {
   /*  vertical-align: middle;
     margin: 0px;
     padding: 0px; */
 }
 
-/* line 142, ../sass/modules/_survey.scss */
+/* line 125, ../sass/modules/_survey.scss */
 #wpss_survey .form-panel radio {
   -webkit-appearance: radio;
   -webkit-box-sizing: border-box;
 }
 
-/* line 148, ../sass/modules/_survey.scss */
+/* line 131, ../sass/modules/_survey.scss */
 #wpss_survey .form-container button {
   float: right;
+  margin-left: 5px;
 }

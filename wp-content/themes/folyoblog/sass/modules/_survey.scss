@@ -1,14 +1,17 @@
 #wpss_survey{
 	.form-container{
 		#progress{
-			@include box-emboss(1,0.2);
-			background:black(0.1);
+			@include box-emboss(1,0.15);
+			background:black(0.07);
 			margin-bottom:20px;
 			border:0;
 			label, p{
-				line-height:26px;
-				font-size:11px;
+				line-height:35px;
+				font-size:13px;
 				vertical-align:middle;
+				font-weight:bold;
+				padding:0 10px;
+				margin:0;
 			}
 			.ui-progressbar-value{
 				@include background-image(linear-gradient(#59aad1, #3680a3));
@@ -49,50 +52,30 @@
 
 /* Quiz Component Contaner */
 #wpss_survey .form-container { 
-  margin:0 auto; 
-  position:relative; 
-  font-size:12px; 
-  padding:20px; 
 }
 
 #wpss_survey .form-panel fieldset{ 
   margin: auto; 
-  padding:22px 0 0; 
-  margin-top:20px; /* Gap between Progress bar and form feild */
 }
 
 /* Progress bar text */
 #wpss_survey p.pgress{ 
   float:left; 
-  vertical-align: top;
-  font-size:11px;font-weight:bold;
-  margin:0 0 0 6px;color:#333;
-  height:1em;
-  padding:0px;
 }
 #wpss_survey label#amount { 
   float:right; 
-  vertical-align: top;
-  font-size:9px;font-weight:bold;
-  margin:2px 5px 0 0;color:#333; 
-  height:1em;
-  padding:0px;
 }
 
 /* Question */
 #wpss_survey p.form_question{
   text-align:left;
-  padding:0 20px 20px 20px;
-  margin-top:0;
-  font-size:14px;
-/*  width:440px;*/
-  margin-bottom:0;
+  margin-bottom:20px;
+  border-bottom:1px solid black(0.1);
+  padding-bottom:20px;
 }
 
 /* Radio Set of Answers*/
 #wpss_survey .answer{
-  margin:0 20px 20px 20px;
-  padding-bottom:10px;
 }
 
 /* Label - Answers, Answer set Style */
@@ -145,4 +128,4 @@
 }
 
 
-#wpss_survey .form-container button { float:right; }
+#wpss_survey .form-container button { float:right; margin-left:5px; }
