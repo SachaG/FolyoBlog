@@ -77,12 +77,12 @@ function custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
-function folyo_enqueue_scripts() {
-	wp_deregister_script( 'jquery' ); // deregisters the default WordPress jQuery  
-    wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'); // register the external file  
-    wp_enqueue_script('jquery'); // enqueue the external file  
-}    
-add_action('wp_enqueue_scripts', 'folyo_enqueue_scripts');
+// function folyo_enqueue_scripts() {
+// 	wp_deregister_script( 'jquery' ); // deregisters the default WordPress jQuery  
+//     wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'); // register the external file  
+//     wp_enqueue_script('jquery'); // enqueue the external file  
+// }    
+// add_action('wp_enqueue_scripts', 'folyo_enqueue_scripts');
 
 
 /**
