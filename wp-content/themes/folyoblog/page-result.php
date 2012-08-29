@@ -67,7 +67,7 @@ STR;
 								<div class="share">
 									<p>Share your result:</p>
 								<div class="tweet">
-								<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://blog.folyo.me/how-good-is-your-portfolio" data-text="My portfolio scored <?php echo $score; ?>/100 on the Folyo Evaluation. Take it too and find out how you compare!" data-via="YoFolyo" data-size="large" data-count="none">Tweet</a>
+								<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://blog.folyo.me/folyo-quiz-how-good-is-your-portfolio/" data-text="My portfolio scored <?php echo $score; ?>/100 on the Folyo Evaluation. Take it too and find out how you compare!" data-via="YoFolyo" data-size="large" data-count="none">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 								</div>
 								</div>
