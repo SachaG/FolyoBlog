@@ -1,0 +1,745 @@
+/* WPSS Super-Container 
+-----------------------------------------------------------*/
+#wpss_survey {
+  color: #333;
+}
+#wpss_survey h2{
+  font-family:Verdana;
+  vertical-align: top; 
+  font-size:17px; margin:5px 0 15px 0;
+  color:#333;font-weight:bold;
+  line-height:1em;
+}
+
+/* Quiz Component Contaner */
+#wpss_survey .form-container { 
+  width:480px;  /* width of quiz*/
+  margin:0 auto; 
+  position:relative; 
+  font-family:Verdana; 
+  font-size:12px; 
+  padding:20px; 
+  background-color:#e0e3e2;   
+  border:3px solid #abadac; 
+}
+
+#wpss_survey .form-panel fieldset{ 
+  width:480px;
+  margin: auto; 
+  padding:22px 0 0; 
+  border:1px solid #abadac; 
+  background-color:#ffffff; 
+  margin-top:20px; /* Gap between Progress bar and form feild */
+}
+
+/* Progress bar text */
+#wpss_survey p.pgress{ 
+  float:left; 
+  vertical-align: top;
+  font-size:9px;font-weight:bold;
+  margin:0 0 0 6px;color:#333;
+  height:1em;
+  padding:0px;
+}
+#wpss_survey label#amount { 
+  float:right; 
+  vertical-align: top;
+  font-size:9px;font-weight:bold;
+  margin:2px 5px 0 0;color:#333; 
+  height:1em;
+  padding:0px;
+}
+
+/* Question */
+#wpss_survey p.form_question{
+  text-align:left;
+  padding:0 20px 20px 20px;
+  margin-top:0;
+  font-size:14px;
+/*  width:440px;*/
+  margin-bottom:0;
+}
+
+/* Radio Set of Answers*/
+#wpss_survey .answer{
+  margin:0 20px 20px 20px;
+  padding-bottom:10px;
+}
+
+/* Label - Answers, Answer set Style */
+#wpss_survey .form-panel label { 
+/* width:415px; */
+/*  float:right;*/
+  padding:0;margin: 0px;
+  color:#333;
+  font-size:14px;
+}
+/* radio and checkbox input */
+#wpss_survey .wpss_radio{
+/*  width:25px;*/
+  
+  padding:0;margin: 0px;
+  margin-right:10px;
+}
+#wpss_survey .answer .answer_text{
+  margin-bottom:15px;
+}
+#wpss_survey .clear {
+  clear: both;
+  font-size: 1px;
+  height: 0;
+}
+
+
+/** 
+  *  Defualt form image assumes centered, you can override specific questions with:
+  *  #wpss_survey #panel{N} fieldset img{} or include style inline to image
+ */
+#wpss_survey .form-panel fieldset img{
+  max-width:95%;
+  padding:0;
+  margin:5px;
+}
+
+
+
+/* Custom Field Inputs */
+#wpss_survey .form-panel input, #wpss_survey .form-panel textarea { 
+/*  vertical-align: middle;
+  margin: 0px;
+  padding: 0px; */
+
+}
+#wpss_survey .form-panel radio{
+  -webkit-appearance: radio;
+  -webkit-box-sizing: border-box;
+}
+
+
+#wpss_survey .form-container button { float:right; }
+
+
+/*  Custom Field Form And Quiz Outro Text
+--------------------------------------------------------------*/
+#wpss_survey .infoForm{
+  text-align:left;
+  width:300px;
+  margin:auto;
+}
+#wpss_survey .infoForm .wpss_customfield{
+  margin-bottom:10px;
+}
+#wpss_survey .infoForm label{
+  font-size:14px;
+  line-height:16px;
+  margin-top:1px;
+  font-weight:bold;
+  margin:0;padding:0;
+  float:left;
+}
+#wpss_survey .infoForm input{
+  float:right;
+  height:16px;line-height:16px;
+  margin:0;
+  background-color: white;
+  border: 1px solid #BBB;
+  color: #4E4E4E;
+}
+
+#wpss_survey h3{ text-align:center; font-size:18px; padding:10px;display:block; }
+
+#wpss_survey #submitButton{
+  padding:5px;
+  margin:20px;
+  text-align:right;
+  float:right;
+}
+
+/* Quiz Setup Page / Tabs
+---------------------------------------------------------------*/
+.wpss_table_wrap p.editing{
+  display:block;
+  border-bottom:1px dotted #DFDFDF;
+  padding:10px 10px;
+  margin:0;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: italic;
+  color:#606060;
+}
+ul#quiz_tabs{
+  margin-top:5px;
+  padding-top:3px;
+  border-top:1px dotted #DFDFDF;
+}
+ul#quiz_tabs li{
+  float:left;
+  height:20px;
+  margin-bottom:0;
+}
+ul#quiz_tabs li a{
+  margin-left:5px;
+  margin-right:5px;
+}
+#quiz_switcher{
+  display:block;
+  border: 1px solid #DFDFDF;
+  border-bottom-left-radius: 4px 4px;
+  border-bottom-right-radius: 4px 4px;
+  border-top-left-radius: 4px 4px;
+  border-top-right-radius: 4px 4px;
+  padding:5px;
+  margin:10px 0;
+  background-color:white;
+}
+#quiz_switcher p.select{ 
+  padding:0;margin:0;
+
+  font-size:14px;
+}
+ul#quiz_tabs li.current a{
+  font-weight: bold;
+}
+#quiz_switcher p.select a{
+  text-decoration: none;
+  font-style: italic;
+}
+#quiz_switcher p.select a:hover{
+  text-decoration: underline;
+}
+/* Admin Table */
+.wpss_table_wrap{
+  padding:0;margin:0;
+  margin-top:15px;
+  margin-bottom:5px;
+  border:#DFDFDF solid 1px;
+  border-bottom-left-radius: 4px 4px;
+  border-bottom-left-radius: 4px 4px;
+  border-bottom-left-radius: 4px 4px;
+  border-bottom-right-radius: 4px 4px;
+  border-bottom-right-radius: 4px 4px;
+  border-bottom-right-radius: 4px 4px;
+  border-top-left-radius: 4px 4px;
+  border-top-left-radius: 4px 4px;
+  border-top-left-radius: 4px 4px;
+  border-top-right-radius: 4px 4px;
+  border-top-right-radius: 4px 4px;
+  border-top-right-radius: 4px 4px;
+}
+table#wpss_admin_table{
+  width:100%;
+  border-collapse:collapse;
+  border: 1px solid #DFDFDF;
+  border:0;
+}
+table#wpss_admin_table h2{
+  font-size:17px;
+  line-height:16px;
+  font-weight:bold;
+  margin:5px 0 0 0;
+  padding:0;  
+  font-style: normal;
+}
+#wpss_admin_table td.admin_head{
+  vertical-align:top;
+  padding:10px 10px 15px 10px;
+}
+#wpss_admin_table input[type="text"],#wpss_admin_table textarea{
+  width:100%;
+}
+#wpss_admin_table td p{
+  margin:10px 0 2px 0;
+  padding:0;
+  font-style: italic;  
+  font-weight:bold;
+  font-size:13px;
+  color:#606060;
+}
+#wpss_admin_table td p.wpss_note{
+  margin:0;
+  padding-top:0;
+  font-style: italic;  
+  font-weight:bold;
+  font-size:9px;
+  color:#606060;
+}
+#wpss_admin_table td#wpss_setup{
+  border-right:1px dotted #DFDFDF;
+  border-bottom:1px dotted #DFDFDF;
+  width:50%;
+}
+#wpss_admin_table td#wpss_tracking{
+  border-left:1px dotted #DFDFDF;
+  border-bottom:1px dotted #DFDFDF;
+  width:50%;
+}
+#wpss_admin_table td#required_info{
+  border-right:1px dotted #DFDFDF;
+  border-top:1px dotted #DFDFDF;
+  border-bottom:1px dotted #DFDFDF;
+  width:50%;
+}
+#wpss_admin_table td#wpss_autorespond{
+  border-left:1px dotted #DFDFDF;
+  border-bottom:1px dotted #DFDFDF;
+  border-top:1px dotted #DFDFDF;
+  width:50%;
+}
+#edit_questions{
+  border-bottom:1px dotted #DFDFDF;
+  border-top:1px dotted #DFDFDF;
+  margin:2px;padding:10px;
+}
+.wpss_saveoptions{
+  padding:10px;
+  border-top:1px dotted #DFDFDF;
+  margin:0;
+}
+
+/* Questions Input table */
+table#wpss_question_table{
+  width:100%;
+  padding:0;
+}
+#wpss_question_table td p{
+  vertical-align:top;
+}
+#wpss_question_table td{
+  vertical-align:top;
+  border-bottom:1px dotted #DFDFDF;
+  border-top:1px dotted #DFDFDF;
+  padding:3px 0 5px 0;
+}
+#wpss_question_table td textarea{
+  width:100%;
+  height:100%;
+} 
+#wpss_question_table .delete_quest{
+  padding-top:15px;
+  width:46px;
+  background:transparent url(images/delete.png) no-repeat 14px 0;
+  float:right;
+  cursor:pointer;
+}
+#wpss_question_table .delete_ans{
+  background:transparent url(images/delete.png) no-repeat 3px 2px;
+  float:right;width:25px;
+  cursor:pointer;
+}
+#required_info .delete_field{
+  background:transparent url(images/delete.png) no-repeat 3px 2px;
+  float:right;width:25px;
+  cursor:pointer;
+}
+#wpss_question_table td.delete_col{
+  margin:0;padding:0;
+  width:56px;
+  border-left:1px dotted #DFDFDF;
+  border-right:1px dotted #DFDFDF;
+  border-top-right-radius: 4px 4px;
+  padding:5px 5px 0 0;
+}
+#wpss_question_table td.id{
+  width:10px;
+  border-right:1px dotted #DFDFDF;
+  border-left:1px dotted #DFDFDF;
+  padding:0 5px;
+  border-bottom-left-radius: 4px 4px;
+  border-bottom-right-radius: 4px 4px;
+  border-top-left-radius: 4px 4px;
+  border-top-right-radius: 4px 4px;
+}
+#wpss_question_table input.weights{
+  text-align:center;
+  width:27px;
+}
+#wpss_question_table td.quest_col{
+  border-right:1px dotted #DFDFDF;
+  border-left:1px dotted #DFDFDF;
+  padding-right:5px;
+  padding-left:5px;
+  width:40%;
+}
+#wpss_question_table .quest_label{
+  color: #606060;
+  font-size: 9px;
+  font-style: italic;
+  font-weight: normal;
+  height: 9px;
+/*  vertical-align: top;*/
+  margin:5px 2px 11px 2px;
+  padding:0;
+}
+
+#wpss_question_table td.ans_col{
+  border-left:1px dotted #DFDFDF;
+  padding-right:5px;
+}
+#wpss_question_table table.ans_weights tr th{
+  vertical-align:top;
+  font-weight: normal;
+  font-size:9px;
+  color:#606060;
+  padding:none;margin:none;
+  font-style: italic;  
+  height:9px;
+}
+#wpss_question_table table.ans_weights{
+  width:100%;
+}
+#wpss_question_table table.ans_weights td{
+  border:none;
+}
+#wpss_question_table table.ans_weights td.ans input.ans{
+  width:99%;
+}
+#wpss_question_table table.ans_weights td.ans input.weights{
+  float:right;
+}
+#wpss_question_table table.ans_weights td.weight{
+  width:27px;
+  margin:auto;
+}
+#wpss_question_table table.ans_weights td.add_ans{
+  text-align:right;margin-top:-10px;
+}
+#wpss_optionsForm table.ans_weights td.add_ans input.addans_button{
+  cursor:pointer;
+  padding-left:18px;
+  padding-right:5px;
+  background:transparent url(images/add.png) no-repeat 2px 0;
+}
+#required_info .addfield_button{
+  cursor:pointer;
+  padding-left:18px;
+  padding-right:5px;
+  background:transparent url(images/add.png) no-repeat 2px 0;
+}
+#wpss_question_table td#add_new_question{
+  border-left:1px dotted #DFDFDF;  
+  border-right:1px dotted #DFDFDF;
+}
+#wpss_question_table td input.addquestion{
+  padding-left:18px;
+  padding-right:5px;  
+  background:transparent url(images/add.png) no-repeat 2px 0;
+  cursor:pointer;
+}
+
+/* admin answer tables */
+#wpss_question_table .wpss_admin_answers_table{
+  width:100%;
+}
+
+/* routes table */
+table#wpss_routes{
+  width:100%;
+}
+table#wpss_routes th{
+  text-align:left;
+}
+
+table#wpss_routes input.addranges{
+  padding-left:18px;
+  padding-right:5px;  
+  background:transparent url(images/add.png) no-repeat 2px 0;
+  cursor:pointer;
+}
+table#wpss_routes td.range,table#wpss_routes th.range{
+  width:120px;
+}
+table#wpss_routes td.range input{
+  width:40px;text-align:right;
+}
+table#wpss_routes td.to input{
+  width:40px;text-align:right;
+}
+table#wpss_routes td.route input{
+  width:100%;
+}
+table#wpss_routes td.remove{
+  text-align:center;
+  width:75px;
+}
+table#wpss_routes th.remove{
+  text-align:center;
+}
+
+/*  Results Page
+--------------------------------------------------------------------*/
+#wpss_results{
+  text-decoration: none;
+}
+#wpss_results p{
+  font-size:10px;
+  text-decoration: none;
+}
+#wpss_results p.result_head{
+  float:left;
+  font-size:13px;
+  padding:2px 5px;
+  margin:3px 0;
+}
+#wpss_results p.results_name{
+  text-align:right;
+  font-size:13px;
+  padding:2px 5px;
+  margin:3px 0;
+}
+.wpss_large{
+  font-size:20px;
+}
+.wpss_b{
+  font-weight:bold;
+}
+.wpss_options{
+  margin-top:15px;
+  margin-bottom:5px;
+  padding:10px;
+  padding-top:0;
+  border:#DFDFDF solid 1px;
+  border-bottom-left-radius: 4px 4px;
+  border-bottom-left-radius: 4px 4px;
+  border-bottom-left-radius: 4px 4px;
+  border-bottom-right-radius: 4px 4px;
+  border-bottom-right-radius: 4px 4px;
+  border-bottom-right-radius: 4px 4px;
+  border-top-left-radius: 4px 4px;
+  border-top-left-radius: 4px 4px;
+  border-top-left-radius: 4px 4px;
+  border-top-right-radius: 4px 4px;
+  border-top-right-radius: 4px 4px;
+  border-top-right-radius: 4px 4px;
+}
+
+.wpss_options .wpss_info{
+  vertical-align:middle;
+  border:none;
+}
+
+.tooltip {
+  display:none;
+  background:transparent url(images/white.png) no-repeat 0 0;
+  font-size:12px;
+  height:80px;
+  width:170px;
+  padding:20px;
+  color:black;  
+}
+
+#wpss_results ol, #wpss_results ul {
+  list-style: none;
+}
+#wpss_results blockquote, #wpss_results q {
+  quotes: none;
+}
+#wpss_results blockquote:before, #wpss_results blockquote:after,#wpss_results q:before, #wpss_results q:after {
+  content: '';
+  content: none;
+}
+
+/* remember to define focus styles! */
+#wpss_results  :focus {
+  outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+#wpss_results  ins {
+  text-decoration: none;
+}
+#wpss_results  del {
+  text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+#wpss_results table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+#wpss_results .wpss_remove{
+  width:30px;height:42px;
+  margin:0;
+  color:red;
+  float:left;
+}
+#wpss_admin_table td .mceToolbar{
+/*  padding:0 5px;*/
+}
+
+#wpss_export #export_button{
+  background:transparent url(images/export.png) no-repeat 7px 1px;
+  padding:33px 5px 2px 5px; 
+  width:51px;
+  border-color: #BBB;
+  text-decoration:none;
+  color: #464646;
+  font-size:12px;
+  border-bottom-left-radius: 4px 4px;
+  border-bottom-right-radius: 4px 4px;
+  border-style: solid;
+  border-width: 1px;
+  border-top-left-radius: 4px 4px;
+  border-top-right-radius: 4px 4px;
+  margin-top:3px;
+  height:49px;
+}
+#wpss_export #export_button:hover{
+  border-color: #464646;
+  color:#464646;
+}
+#wpss_export a:hover{
+  color:#464646;
+}
+#wpss_export #kill_button{
+  background:transparent url(images/kill.png) no-repeat 8px 1px;
+  padding:34px 5px 3px 5px; 
+  width:51px;
+}
+
+#wpss_exportForm{
+  float:left;
+}
+#wpss_resultsForm{
+  float:right;
+}
+
+#export_type{
+  float:left;
+  padding-right:7px;
+}
+#export_info{
+  float:left;
+  padding-right:7px;
+}
+
+/*  Admin Help Page
+------------------------------------------------------------*/
+#wpss_help .donate{
+  border: 1px solid #DFDFDF;
+  border-bottom-left-radius: 4px 4px;
+  border-bottom-right-radius: 4px 4px;
+  border-top-left-radius: 4px 4px;
+  border-top-right-radius: 4px 4px;
+  padding: 5px;
+  margin: 10px 0 10px 10px;
+  background-color: white;
+  text-align:center;
+  width:250px;
+  margin:auto;
+}
+
+#wpss_help #quiz_summary_main h2{
+  margin-top:0;padding-top:0;
+  margin-bottom:0;padding-bottom:0;
+}
+#wpss_help ul.wpss_adminlist{
+  list-style-type:disc;
+  padding: 0;
+  margin-top:10px;
+  margin-left: 25px;
+}
+#wpss_help ul.wpss_adminlist ul{
+  list-style-type: circle;
+  padding: 0;
+  margin-top:10px;
+  margin-left: 25px;
+}
+
+
+/*  Export/View Results Page
+------------------------------------------------------------*/
+#quiz_summary_main{
+  margin-right:335px;
+  padding:10px;
+  border: 1px solid #DFDFDF;
+  border-bottom-left-radius: 4px 4px;
+  border-bottom-right-radius: 4px 4px;
+  border-top-left-radius: 4px 4px;
+  border-top-right-radius: 4px 4px;
+  background-color: white; 
+}
+.quiz_summary_sidebar{
+  float: right;
+  width: 300px;
+  padding:10px;
+  border: 1px solid #DFDFDF;
+  border-bottom-left-radius: 4px 4px;
+  border-bottom-right-radius: 4px 4px;
+  border-top-left-radius: 4px 4px;
+  border-top-right-radius: 4px 4px;
+  background-color:#F1F1F1; 
+}
+#quiz_summary_holder h2 a,#quiz_summary_holder h2{
+  padding-top:0;padding-bottom:0;
+  margin-top:0;margin-bottom:0;
+  font-size:14px;
+}
+#quiz_summary_holder h2.summary{
+  font-weight:bold;
+  margin:0;
+  padding-bottom:0;
+  padding-top:8px;
+  text-decoration:underline;
+} 
+input.wpss_remove{
+  padding-left:22px;
+  padding-right:5px;  
+  background:transparent url(images/delete.png) no-repeat 2px 2px;
+  cursor:pointer;
+}
+input.wpss_export{
+  width:40px;
+  height:40px;
+  background:transparent url(images/export.png) no-repeat 2px 2px;
+  cursor:pointer;
+  float:left;
+  margin-right:3px;
+  margin-top:10px;
+}
+h2.exports{
+  font-size:16px;
+}
+
+
+input.wpss_clear_results{
+  width:40px;
+  height:40px;
+  background:transparent url(images/delete-all.png) no-repeat 2px 2px;
+  cursor:pointer;
+  float:left;
+  margin-right:3px;
+  margin-top:10px;
+}
+
+
+/*  Global options page
+------------------------------------------------*/
+#wpss_togglejquery{
+  border:1px #DFDFDF solid;
+  padding-left:10px;
+  padding-right:10px;  
+  width:60%;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  
+  background: #ffffff; /* old browsers */
+  background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* firefox */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* webkit */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* ie */
+  background: -o-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* opera */
+}
+.wpss_global_options_form{
+  border:1px #DFDFDF solid;
+  padding-left:10px;
+  padding-right:10px;  
+  width:60%;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  
+  background: #ffffff; /* old browsers */
+  background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* firefox */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* webkit */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* ie */
+  background: -o-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* opera */
+}
+

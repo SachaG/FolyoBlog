@@ -59,6 +59,15 @@ if(!is_admin()){
 	add_action('wp_enqueue_scripts', 'folyoblog_enqueue_scripts');
 } 
 
+function folyoblog_dequeue_scripts() {
+  if(!is_admin()){
+    wp_dequeue_style('wpss_style');  
+    // wp_dequeue_style('wpss_uicore');
+    // wp_dequeue_style('wpss_uitheme');
+    // wp_dequeue_style('wpss_probar');
+  } 
+}
+add_action('wp_print_styles', 'folyoblog_dequeue_scripts');
 
 // Remove Admin Bar Front End
 add_filter('show_admin_bar', '__return_false');

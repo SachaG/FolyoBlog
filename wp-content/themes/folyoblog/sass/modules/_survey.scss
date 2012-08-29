@@ -1,0 +1,148 @@
+#wpss_survey{
+	.form-container{
+		#progress{
+			@include box-emboss(1,0.2);
+			background:black(0.1);
+			margin-bottom:20px;
+			border:0;
+			label, p{
+				line-height:26px;
+				font-size:11px;
+				vertical-align:middle;
+			}
+			.ui-progressbar-value{
+				@include background-image(linear-gradient(#59aad1, #3680a3));
+				border:none;
+				margin:0;
+			}
+		}
+		.form-panel{
+			background:white;
+			@include box-shadow(0 1px 2px black(0.25));
+			@include border-radius(3px);
+			padding:20px;
+			@include cf;
+			margin-bottom:20px;
+		}
+		#submitButton{
+			float:right;
+		}
+		#thanks{
+			h3{
+				background:none;
+				padding:0;
+			}
+			#submitButton{
+				@include button;
+			}
+		}
+	}
+}
+/* WPSS Super-Container 
+-----------------------------------------------------------*/
+#wpss_survey {
+  color: #333;
+}
+#wpss_survey h2{
+	display:none;
+}
+
+/* Quiz Component Contaner */
+#wpss_survey .form-container { 
+  margin:0 auto; 
+  position:relative; 
+  font-size:12px; 
+  padding:20px; 
+}
+
+#wpss_survey .form-panel fieldset{ 
+  margin: auto; 
+  padding:22px 0 0; 
+  margin-top:20px; /* Gap between Progress bar and form feild */
+}
+
+/* Progress bar text */
+#wpss_survey p.pgress{ 
+  float:left; 
+  vertical-align: top;
+  font-size:11px;font-weight:bold;
+  margin:0 0 0 6px;color:#333;
+  height:1em;
+  padding:0px;
+}
+#wpss_survey label#amount { 
+  float:right; 
+  vertical-align: top;
+  font-size:9px;font-weight:bold;
+  margin:2px 5px 0 0;color:#333; 
+  height:1em;
+  padding:0px;
+}
+
+/* Question */
+#wpss_survey p.form_question{
+  text-align:left;
+  padding:0 20px 20px 20px;
+  margin-top:0;
+  font-size:14px;
+/*  width:440px;*/
+  margin-bottom:0;
+}
+
+/* Radio Set of Answers*/
+#wpss_survey .answer{
+  margin:0 20px 20px 20px;
+  padding-bottom:10px;
+}
+
+/* Label - Answers, Answer set Style */
+#wpss_survey .form-panel label { 
+/* width:415px; */
+/*  float:right;*/
+  padding:0;margin: 0px;
+  color:#333;
+  font-size:14px;
+}
+/* radio and checkbox input */
+#wpss_survey .wpss_radio{
+/*  width:25px;*/
+  
+  padding:0;margin: 0px;
+  margin-right:10px;
+}
+#wpss_survey .answer .answer_text{
+  margin-bottom:15px;
+}
+#wpss_survey .clear {
+  clear: both;
+  font-size: 1px;
+  height: 0;
+}
+
+
+/** 
+  *  Defualt form image assumes centered, you can override specific questions with:
+  *  #wpss_survey #panel{N} fieldset img{} or include style inline to image
+ */
+#wpss_survey .form-panel fieldset img{
+  max-width:95%;
+  padding:0;
+  margin:5px;
+}
+
+
+
+/* Custom Field Inputs */
+#wpss_survey .form-panel input, #wpss_survey .form-panel textarea { 
+/*  vertical-align: middle;
+  margin: 0px;
+  padding: 0px; */
+
+}
+#wpss_survey .form-panel radio{
+  -webkit-appearance: radio;
+  -webkit-box-sizing: border-box;
+}
+
+
+#wpss_survey .form-container button { float:right; }
