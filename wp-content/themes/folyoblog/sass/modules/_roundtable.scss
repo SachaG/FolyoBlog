@@ -135,6 +135,22 @@
 				content:"Neil";
 			}		
 		}
+		&.gillis{
+			&:before{
+				background-image:url("../images/gillis-avatar.jpg");
+			}
+			&:after{
+				content:"Chris";
+			}
+		}
+		&.akshay{
+			&:before{
+				background-image:url("../images/akshay-avatar.jpg");
+			}
+			&:after{
+				content:"Akshay";
+			}		
+		}
 	}
 	blockquote+blockquote{
 		border-top:none;

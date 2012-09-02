@@ -2189,15 +2189,31 @@ header .tagline p {
   content: "Neil";
 }
 /* line 139, ../sass/modules/_roundtable.scss */
+.category-roundtables blockquote.gillis:before, .category-case-studies blockquote.gillis:before {
+  background-image: url("../images/gillis-avatar.jpg");
+}
+/* line 142, ../sass/modules/_roundtable.scss */
+.category-roundtables blockquote.gillis:after, .category-case-studies blockquote.gillis:after {
+  content: "Chris";
+}
+/* line 147, ../sass/modules/_roundtable.scss */
+.category-roundtables blockquote.akshay:before, .category-case-studies blockquote.akshay:before {
+  background-image: url("../images/akshay-avatar.jpg");
+}
+/* line 150, ../sass/modules/_roundtable.scss */
+.category-roundtables blockquote.akshay:after, .category-case-studies blockquote.akshay:after {
+  content: "Akshay";
+}
+/* line 155, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote + blockquote, .category-case-studies blockquote + blockquote {
   border-top: none;
   padding-top: 0px;
 }
-/* line 142, ../sass/modules/_roundtable.scss */
+/* line 158, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote + blockquote:before, .category-case-studies blockquote + blockquote:before {
   top: 0px;
 }
-/* line 145, ../sass/modules/_roundtable.scss */
+/* line 161, ../sass/modules/_roundtable.scss */
 .category-roundtables blockquote + blockquote:after, .category-case-studies blockquote + blockquote:after {
   top: 70px;
 }
